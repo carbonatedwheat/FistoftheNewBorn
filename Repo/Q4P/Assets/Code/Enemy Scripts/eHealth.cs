@@ -8,6 +8,8 @@ public class eHealth : MonoBehaviour {
     public float eMinHealth;
     public float eCurrentHealth;
     public GameObject Host;
+
+    public DamageScript damage;
 	// Use this for initialization
 	void Start () {
         eCurrentHealth = eMaxHealth;
@@ -15,12 +17,21 @@ public class eHealth : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "HitBox")
+        if(collision.gameObject.tag == "HitBoxLight")
         {
-            eCurrentHealth -= 1;
-            //eCurrentHealth - damage = eCurrentHealth;
+            //eCurrentHealth -= 1;
+            eCurrentHealth -= damage.Light;
+            //eCurrentHealth -= damage.damageAmount = eCurrentHealth;
             Debug.Log("Checkem");
         }
+        if (collision.gameObject.tag == "HitBoxHeavy")
+        {
+            //eCurrentHealth -= 1;
+            eCurrentHealth -= damage.Heavy;
+            //eCurrentHealth -= damage.damageAmount = eCurrentHealth;
+            Debug.Log("dubs");
+        }
+
     }
     // Update is called once per frame
     void Update () {
