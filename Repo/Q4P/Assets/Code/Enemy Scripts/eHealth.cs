@@ -15,9 +15,9 @@ public class eHealth : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Hitbox")
+        if(collision.gameObject.tag == "HitBox")
         {
-            eCurrentHealth--;
+            eCurrentHealth -= 1;
             //eCurrentHealth - damage = eCurrentHealth;
             Debug.Log("Checkem");
         }
