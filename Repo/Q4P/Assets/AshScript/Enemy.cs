@@ -13,8 +13,8 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-
-
+        
+        Player = GameObject.FindWithTag("Player").transform;
 
     }
 
@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
 
 
         transform.LookAt(Player);
+
 
         if (Vector3.Distance(transform.position, Player.position) >= Min)
         {
@@ -33,14 +34,15 @@ public class Enemy : MonoBehaviour
 
 
 
-            if (Vector3.Distance(transform.position, Player.position) <= Max)
-            {
+            
+        }
+        if (Vector3.Distance(transform.position, Player.position) <= Max)
+        {
 
 
-                //Here Call any function U want Like Shoot at here or something
 
 
-            }
+
         }
     }
 }
