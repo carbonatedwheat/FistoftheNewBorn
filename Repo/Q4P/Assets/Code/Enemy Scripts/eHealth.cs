@@ -5,7 +5,7 @@ using UnityEngine;
 public class eHealth : MonoBehaviour {
 
     public float eMaxHealth;
-    public float eMinHealth;
+    public float eMinHealth;                           //LOL GET HACKED NERD XD
     public float eCurrentHealth;
     public GameObject Host;
 
