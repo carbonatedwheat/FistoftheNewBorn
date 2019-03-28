@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CamController : MonoBehaviour
 {
-    public float RotationSpeed = 1;
+    public float RotationSpeed = 10;
     public Transform Target, Player;
     float mX, mY;
     // Camera mycam = GetComponent<Camera>();
