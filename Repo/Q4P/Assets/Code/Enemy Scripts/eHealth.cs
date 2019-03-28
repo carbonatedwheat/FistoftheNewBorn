@@ -5,7 +5,7 @@ using UnityEngine;
 public class eHealth : MonoBehaviour {
 
     public float eMaxHealth;
-    public float eMinHealth;                           //LOL GET HACKED NERD XD
+    public float eMinHealth;                           
     public float eCurrentHealth;
     public GameObject Host;
 
@@ -19,16 +19,12 @@ public class eHealth : MonoBehaviour {
     {
         if(collision.gameObject.tag == "HitBoxLight")
         {
-            //eCurrentHealth -= 1;
             eCurrentHealth -= damage.Light;
-            //eCurrentHealth -= damage.damageAmount = eCurrentHealth;
             Debug.Log("Checkem");
         }
         if (collision.gameObject.tag == "HitBoxHeavy")
         {
-            //eCurrentHealth -= 1;
             eCurrentHealth -= damage.Heavy;
-            //eCurrentHealth -= damage.damageAmount = eCurrentHealth;
             Debug.Log("dubs");
         }
 

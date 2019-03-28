@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - HitBoxHeavy
   - HitBoxLight
+  - SpiderStab
+  - AntSlash
+  - BlockSpell
   layers:
   - Default
   - TransparentFX

@@ -126,8 +126,8 @@ GameObject:
   - component: {fileID: 126325296}
   - component: {fileID: 126325295}
   - component: {fileID: 126325294}
-  - component: {fileID: 126325293}
   - component: {fileID: 126325292}
+  - component: {fileID: 126325293}
   m_Layer: 0
   m_Name: Heroic Cube
   m_TagString: Player
@@ -142,16 +142,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126325291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2113761ed9ede064d92ba8fda433c10f, type: 3}
+  m_Script: {fileID: 11500000, guid: 759f649ea0aafac47a6ff22bba47ac43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eMaxHealth: 5
-  eMinHealth: 0
-  eCurrentHealth: 0
-  Host: {fileID: 126325291}
-  damage: {fileID: 2042078234}
+  pMaxHealth: 20
+  pMinHealth: 0
+  pCurrentHealth: 0
+  damage: {fileID: 1309761642}
 --- !u!114 &126325293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,7 +158,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126325291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae6d927239a77e64cb1d6dfb8f03595c, type: 3}
   m_Name: 
@@ -172,7 +171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126325291}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e484a97b1de80340b7f5e8275845c1d, type: 3}
   m_Name: 
@@ -441,29 +440,13 @@ GameObject:
   - component: {fileID: 1091987684}
   - component: {fileID: 1091987683}
   - component: {fileID: 1091987682}
-  - component: {fileID: 1091987681}
   m_Layer: 0
   m_Name: Enemy HitBox
-  m_TagString: HurtBox
+  m_TagString: BlockSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1091987681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1091987680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fec7660681dcaf498ff77cb49704d91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Light: 2
-  Heavy: 4
-  enemy: 0
 --- !u!65 &1091987682
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -570,7 +553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &1092523597
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -675,7 +658,7 @@ MonoBehaviour:
   eMinHealth: 0
   eCurrentHealth: 0
   Host: {fileID: 1092523596}
-  damage: {fileID: 2042078234}
+  damage: {fileID: 1309761642}
 --- !u!114 &1092523603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +673,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   v3: {x: 0, y: 0, z: 0}
   speed: 20
+--- !u!1 &1309761641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1309761643}
+  - component: {fileID: 1309761642}
+  m_Layer: 0
+  m_Name: Damage Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1309761642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309761641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fec7660681dcaf498ff77cb49704d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Light: 2
+  Heavy: 5
+  enemy: 10
+  spiderStab: 15
+  samuraiAntSlash: 7
+  spellingBlockSpell: 10
+--- !u!4 &1309761643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309761641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1529762798
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,7 +735,6 @@ GameObject:
   - component: {fileID: 1529762802}
   - component: {fileID: 1529762801}
   - component: {fileID: 1529762800}
-  - component: {fileID: 1529762799}
   m_Layer: 0
   m_Name: Literal Heavy HitBox
   m_TagString: HitBoxHeavy
@@ -711,21 +742,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1529762799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529762798}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fec7660681dcaf498ff77cb49704d91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Light: 2
-  Heavy: 4
-  enemy: 0
 --- !u!65 &1529762800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -906,7 +922,6 @@ GameObject:
   - component: {fileID: 2042078230}
   - component: {fileID: 2042078229}
   - component: {fileID: 2042078233}
-  - component: {fileID: 2042078234}
   m_Layer: 0
   m_Name: Literal Light HitBox
   m_TagString: HitBoxLight
@@ -999,18 +1014,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2042078234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042078228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fec7660681dcaf498ff77cb49704d91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Light: 2
-  Heavy: 4
-  enemy: 0
