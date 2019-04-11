@@ -44,6 +44,8 @@ public class pHealth : MonoBehaviour
         if (pCurrentHealth <= pMinHealth)
         {
             Debug.Log("Game Over");
+            gameObject.SetActive(false);
+
         }
     }
 }
