@@ -472,6 +472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 327436151}
+  - component: {fileID: 327436152}
   - component: {fileID: 327436150}
   m_Layer: 0
   m_Name: SwordPivot
@@ -488,7 +489,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327436149}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 035b48dfd6c670d45b960aaa61331ad6, type: 2}
   m_CullingMode: 0
@@ -514,6 +515,20 @@ Transform:
   m_Father: {fileID: 1816775030}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &327436152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327436149}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b399f4910ad70b41b261d1cf68d9dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 327436150}
+  Attack: 0
 --- !u!1 &683968430
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +705,6 @@ GameObject:
   - component: {fileID: 701100624}
   - component: {fileID: 701100623}
   - component: {fileID: 701100622}
-  - component: {fileID: 701100621}
   m_Layer: 0
   m_Name: Ant Sword
   m_TagString: AntSlash
@@ -698,25 +712,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &701100621
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 701100620}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 70e74441a3718634cb1e0d4864afc71a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &701100622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -802,6 +797,7 @@ GameObject:
   - component: {fileID: 739742399}
   - component: {fileID: 739742401}
   - component: {fileID: 739742400}
+  - component: {fileID: 739742402}
   m_Layer: 0
   m_Name: Enemy Pref
   m_TagString: Untagged
@@ -824,25 +820,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &739742400
-Animator:
-  serializedVersion: 3
+--- !u!114 &739742400
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739742398}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 035b48dfd6c670d45b960aaa61331ad6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b399f4910ad70b41b261d1cf68d9dba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 327436150}
+  Attack: 0
 --- !u!114 &739742401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,11 +846,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bca5ccedc927074291e923fb1ef53f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   speed: 3
   Max: 20
-  Min: 0
-  aRange: 5
+  Min: 1
+  aRange: 2
   Player: {fileID: 126325299}
+  SwordPivot: {fileID: 327436149}
+--- !u!95 &739742402
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739742398}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 035b48dfd6c670d45b960aaa61331ad6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &809571089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,7 +1704,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 72
   m_CollisionDetection: 0
 --- !u!1 &1925638077
 GameObject:
