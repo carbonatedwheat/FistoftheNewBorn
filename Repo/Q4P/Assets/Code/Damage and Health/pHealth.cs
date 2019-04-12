@@ -15,7 +15,30 @@ public class pHealth : MonoBehaviour
         pCurrentHealth = pMaxHealth;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "HurtBox")
+        {
+            pCurrentHealth -= damage.enemy;
+        }
+        if (other.gameObject.tag == "SpiderStab")
+        {
+            pCurrentHealth -= damage.spiderStab;
+
+        }
+        if (other.gameObject.tag == "AntSlash")
+        {
+            pCurrentHealth -= damage.samuraiAntSlash;
+
+        }
+        if (other.gameObject.tag == "BlockSpell")
+        {
+            pCurrentHealth -= damage.spellingBlockSpell;
+
+        }
+    }
+
+        private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "HurtBox")
         {
