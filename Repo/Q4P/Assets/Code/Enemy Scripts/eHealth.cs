@@ -35,7 +35,7 @@ public class eHealth : MonoBehaviour {
     void Update () {
 		if(eCurrentHealth <= eMinHealth)
         {
-            Host.SetActive(false);
+            gameObject.SetActive(false);
         }
 	}
 }
