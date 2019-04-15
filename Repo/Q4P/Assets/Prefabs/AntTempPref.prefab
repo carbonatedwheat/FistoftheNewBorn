@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 3847382127603510605}
   m_Layer: 0
   m_Name: Ant PH
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +316,7 @@ BoxCollider:
   m_GameObject: {fileID: 3847382127603510607}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -361,11 +361,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3847382127997595748}
   - component: {fileID: 3847382127997595749}
-  - component: {fileID: 3847382127997595750}
-  - component: {fileID: 3847382127997595751}
+  - component: {fileID: 2656658895362312281}
+  - component: {fileID: 4266285379463620396}
   m_Layer: 0
   m_Name: AntTempPref
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -378,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3847382127997595736}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7739999, y: 4.01, z: -20.954}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3847382128461087098}
@@ -399,43 +399,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   Max: 20
-  Min: 1
-  Player: {fileID: 0}
+  Min: 1.5
+  Player: {fileID: 8664889437091366962, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
   AttackDur: 2
---- !u!114 &3847382127997595750
+--- !u!114 &2656658895362312281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3847382127997595736}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b399f4910ad70b41b261d1cf68d9dba, type: 3}
+  m_Script: {fileID: 11500000, guid: 2113761ed9ede064d92ba8fda433c10f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 3847382128603605661}
-  Player: {fileID: 0}
-  aRange: 0
---- !u!95 &3847382127997595751
-Animator:
-  serializedVersion: 3
+  eMaxHealth: 5
+  eMinHealth: 0
+  eCurrentHealth: 0
+  Host: {fileID: 0}
+  damage: {fileID: 5535927122363276711, guid: c3b080146daf7914cb1c157b85e21c48, type: 3}
+--- !u!65 &4266285379463620396
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3847382127997595736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 035b48dfd6c670d45b960aaa61331ad6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3847382128461087099
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +491,7 @@ BoxCollider:
   m_GameObject: {fileID: 3847382128461087099}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 2.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
@@ -545,8 +541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 3847382128603605661}
-  Player: {fileID: 0}
-  aRange: 2
+  Player: {fileID: 8664889437091366962, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
+  aRange: 15
 --- !u!95 &3847382128603605661
 Animator:
   serializedVersion: 3
