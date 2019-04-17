@@ -87,7 +87,16 @@ public class pHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pAttack.blockerBool == true)
+        if (pCurrentHealth <= pMinHealth)
+        {
+            //Debug.Log("Game Over");
+            SceneManager.LoadScene("GameOver");
+            gameObject.SetActive(false);
+
+
+
+        }
+        if (pAttack.blockerBool == true)
         {
             pBlock = true;
         }
@@ -95,14 +104,6 @@ public class pHealth : MonoBehaviour
         {
             pBlock = false;
         }
-        if (pCurrentHealth <= pMinHealth)
-        {
-            //Debug.Log("Game Over");
-            SceneManager.LoadScene("GameOver");
-            //gameObject.SetActive(false);
-
-
-
-        }
+       
     }
 }
