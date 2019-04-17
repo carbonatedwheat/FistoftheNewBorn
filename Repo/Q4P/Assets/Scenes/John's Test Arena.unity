@@ -7229,11 +7229,21 @@ PrefabInstance:
       propertyPath: blocker
       value: 
       objectReference: {fileID: 8643095569095074859}
+    - target: {fileID: 6840039606371351207, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3680911261617895042, guid: a7aa0fecaed5fab4fbb20197a5d53141,
         type: 3}
       propertyPath: damage
       value: 
       objectReference: {fileID: 560814134}
+    - target: {fileID: 3680911261617895042, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9021827931574643000, guid: a7aa0fecaed5fab4fbb20197a5d53141,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -7254,6 +7264,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5448892389681609874, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
+      propertyPath: damage
+      value: 
+      objectReference: {fileID: 560814134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
 --- !u!4 &4119287729092704073 stripped
