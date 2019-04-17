@@ -61,29 +61,6 @@ public class pHealth : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "HurtBox")
-    //    {
-    //        pCurrentHealth -= damage.enemy;
-
-    //    }
-    //    if (collision.gameObject.tag == "SpiderStab")
-    //    {
-    //        pCurrentHealth -= damage.spiderStab;
-
-    //    }
-    //    if (collision.gameObject.tag == "AntSlash")
-    //    {
-    //        pCurrentHealth -= damage.samuraiAntSlash;
-
-    //    }
-    //    if (collision.gameObject.tag == "BlockSpell")
-    //    {
-    //        pCurrentHealth -= damage.spellingBlockSpell;
-
-    //    }
-    //}
     // Update is called once per frame
     void Update()
     {
@@ -97,7 +74,6 @@ public class pHealth : MonoBehaviour
 
         }
 
-<<<<<<< HEAD
         if (pAttack.blockerBool == true)
         {
             pBlock = true;
@@ -106,18 +82,6 @@ public class pHealth : MonoBehaviour
         {
             pBlock = false;
         }
-
-=======
-        //if (pAttack.blockerBool == true)
-        //{
-        //    pBlock = true;
-        //}
-        //if(pAttack.blockerBool == false)
-        //{
-        //    pBlock = false;
-        //}
-       
->>>>>>> e7f2df94e69099b15b1faf2fbaeb4d099b5f3c57
 
     }
 }
