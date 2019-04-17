@@ -36,26 +36,26 @@ public class pHealth : MonoBehaviour
 
             }
         }
-        if(pBlock == true)
+        if (pBlock == true)
         {
             if (other.gameObject.tag == "BlockSpell")
             {
-                pCurrentHealth -= damage.spellingBlockSpell*0.5f;
+                pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
 
             }
             if (other.gameObject.tag == "SpiderStab")
             {
-                pCurrentHealth -= damage.spiderStab*0.5f;
+                pCurrentHealth -= damage.spiderStab * 0.5f;
 
             }
             if (other.gameObject.tag == "AntSlash")
             {
-                pCurrentHealth -= damage.samuraiAntSlash*0.5f;
+                pCurrentHealth -= damage.samuraiAntSlash * 0.5f;
                 Debug.Log("Reduced Damage");
             }
             if (other.gameObject.tag == "BlockSpell")
             {
-                pCurrentHealth -= damage.spellingBlockSpell*0.5f;
+                pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
 
             }
         }
@@ -97,6 +97,17 @@ public class pHealth : MonoBehaviour
 
         }
 
+<<<<<<< HEAD
+        if (pAttack.blockerBool == true)
+        {
+            pBlock = true;
+        }
+        if (pAttack.blockerBool == false)
+        {
+            pBlock = false;
+        }
+
+=======
         //if (pAttack.blockerBool == true)
         //{
         //    pBlock = true;
@@ -106,6 +117,7 @@ public class pHealth : MonoBehaviour
         //    pBlock = false;
         //}
        
+>>>>>>> e7f2df94e69099b15b1faf2fbaeb4d099b5f3c57
 
     }
 }
