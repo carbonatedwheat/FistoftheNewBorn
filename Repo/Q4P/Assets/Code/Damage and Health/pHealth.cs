@@ -7,7 +7,8 @@ public class pHealth : MonoBehaviour
     public float pMaxHealth;
     public float pMinHealth;
     public float pCurrentHealth;
-   
+    public bool pBlock;
+    public pAttack pAttack;
     public DamageScript damage;
     // Start is called before the first frame update
     void Start()
@@ -17,28 +18,49 @@ public class pHealth : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "HurtBox")
+        if (pBlock == false)
         {
-            pCurrentHealth -= damage.enemy;
-        }
-        if (other.gameObject.tag == "SpiderStab")
-        {
-            pCurrentHealth -= damage.spiderStab;
+            if (other.gameObject.tag == "HurtBox")
+            {
+                pCurrentHealth -= damage.enemy;
+            }
+            if (other.gameObject.tag == "SpiderStab")
+            {
+                pCurrentHealth -= damage.spiderStab;
 
-        }
-        if (other.gameObject.tag == "AntSlash")
-        {
-            pCurrentHealth -= damage.samuraiAntSlash;
+            }
+            if (other.gameObject.tag == "AntSlash")
+            {
+                pCurrentHealth -= damage.samuraiAntSlash;
 
+            }
         }
-        if (other.gameObject.tag == "BlockSpell")
+        if(pBlock == true)
         {
-            pCurrentHealth -= damage.spellingBlockSpell;
+            if (other.gameObject.tag == "BlockSpell")
+            {
+                pCurrentHealth -= damage.spellingBlockSpell/2;
 
+            }
+            if (other.gameObject.tag == "SpiderStab")
+            {
+                pCurrentHealth -= damage.spiderStab/2;
+
+            }
+            if (other.gameObject.tag == "AntSlash")
+            {
+                pCurrentHealth -= damage.samuraiAntSlash * 0.5f;
+                Debug.Log("Reduced Damage");
+            }
+            if (other.gameObject.tag == "BlockSpell")
+            {
+                pCurrentHealth -= damage.spellingBlockSpell/2;
+
+            }
         }
     }
 
-        private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "HurtBox")
         {
@@ -48,22 +70,30 @@ public class pHealth : MonoBehaviour
         if (collision.gameObject.tag == "SpiderStab")
         {
             pCurrentHealth -= damage.spiderStab;
-            
+
         }
         if (collision.gameObject.tag == "AntSlash")
         {
             pCurrentHealth -= damage.samuraiAntSlash;
-            
+
         }
         if (collision.gameObject.tag == "BlockSpell")
         {
             pCurrentHealth -= damage.spellingBlockSpell;
-            
+
         }
     }
     // Update is called once per frame
     void Update()
     {
+        if(pAttack.blockerBool == true)
+        {
+            pBlock = true;
+        }
+        if(pAttack.blockerBool == false)
+        {
+            pBlock = false;
+        }
         if (pCurrentHealth <= pMinHealth)
         {
             Debug.Log("Game Over");

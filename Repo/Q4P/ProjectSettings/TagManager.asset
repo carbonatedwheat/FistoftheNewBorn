@@ -12,6 +12,7 @@ TagManager:
   - SpiderStab
   - AntSlash
   - BlockSpell
+  - BlockBox
   layers:
   - Default
   - TransparentFX
