@@ -363,6 +363,7 @@ GameObject:
   - component: {fileID: 3847382127997595749}
   - component: {fileID: 2656658895362312281}
   - component: {fileID: 4266285379463620396}
+  - component: {fileID: 8696030283896662595}
   m_Layer: 0
   m_Name: AntTempPref
   m_TagString: Enemy
@@ -400,7 +401,8 @@ MonoBehaviour:
   speed: 3
   Max: 20
   Min: 1.5
-  Player: {fileID: 8664889437091366962, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
+  inRange: 0
+  Player: {fileID: 7017039499240154642, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
   AttackDur: 2
 --- !u!114 &2656658895362312281
 MonoBehaviour:
@@ -431,6 +433,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 2.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &8696030283896662595
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3847382127997595736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 4.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3847382128461087099
 GameObject:
@@ -541,7 +556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 3847382128603605661}
-  Player: {fileID: 8664889437091366962, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
+  Player: {fileID: 7017039499240154642, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
   aRange: 15
 --- !u!95 &3847382128603605661
 Animator:
