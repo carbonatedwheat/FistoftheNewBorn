@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pHealth : MonoBehaviour
 {
@@ -66,8 +67,11 @@ public class pHealth : MonoBehaviour
     {
         if (pCurrentHealth <= pMinHealth)
         {
-            Debug.Log("Game Over");
-            gameObject.SetActive(false);
+            //Debug.Log("Game Over");
+            SceneManager.LoadScene("GameOver");
+            //gameObject.SetActive(false);
+
+
 
         }
     }
