@@ -46,8 +46,9 @@ GameObject:
   - component: {fileID: 8409393678324672052}
   - component: {fileID: 4812453128858934167}
   - component: {fileID: 6840039606371351207}
-  - component: {fileID: 2573999530657812268}
   - component: {fileID: 3680911261617895042}
+  - component: {fileID: 5448892389681609874}
+  - component: {fileID: 2573999530657812268}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -169,19 +170,67 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3680911261617895066}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8141071d23aac74ca47cad2e2fa06d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lightAttack: {fileID: 4402933385946101137}
   heavyAttack: {fileID: 4170391859841560350}
+  blocker: {fileID: 0}
   light1: 0
   heavy1: 0
   light2: 0
   heavy2: 0
   light3: 0
   heavy3: 0
+  blockerBool: 0
+--- !u!114 &3680911261617895042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680911261617895066}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759f649ea0aafac47a6ff22bba47ac43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pMaxHealth: 20
+  pMinHealth: 0
+  pCurrentHealth: 0
+  pBlock: 0
+  pAttack: {fileID: 0}
+  damage: {fileID: 0}
+--- !u!114 &5448892389681609874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680911261617895066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe4aa11b91cc684a9658742d00b37a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAttack: {fileID: 4402933385946101137}
+  heavyAttack: {fileID: 4170391859841560350}
+  blocker: {fileID: 8643095569095074859}
+  light1: 0
+  heavy1: 0
+  light2: 0
+  heavy2: 0
+  light3: 0
+  heavy3: 0
+  blockerBool: 0
+  pMaxHealth: 20
+  pMinHealth: 0
+  pCurrentHealth: 0
+  pBlock: 0
+  pAttack: {fileID: 0}
+  damage: {fileID: 0}
 --- !u!95 &2573999530657812268
 Animator:
   serializedVersion: 3
@@ -201,22 +250,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3680911261617895042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3680911261617895066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 759f649ea0aafac47a6ff22bba47ac43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pMaxHealth: 20
-  pMinHealth: 0
-  pCurrentHealth: 0
-  damage: {fileID: 0}
 --- !u!1 &3813775604351687751
 GameObject:
   m_ObjectHideFlags: 0

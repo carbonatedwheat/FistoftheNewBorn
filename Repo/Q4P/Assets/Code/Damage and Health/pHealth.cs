@@ -40,69 +40,70 @@ public class pHealth : MonoBehaviour
         {
             if (other.gameObject.tag == "BlockSpell")
             {
-                pCurrentHealth -= damage.spellingBlockSpell/2;
+                pCurrentHealth -= damage.spellingBlockSpell*0.5f;
 
             }
             if (other.gameObject.tag == "SpiderStab")
             {
-                pCurrentHealth -= damage.spiderStab/2;
+                pCurrentHealth -= damage.spiderStab*0.5f;
 
             }
             if (other.gameObject.tag == "AntSlash")
             {
-                pCurrentHealth -= damage.samuraiAntSlash * 0.5f;
+                pCurrentHealth -= damage.samuraiAntSlash*0.5f;
                 Debug.Log("Reduced Damage");
             }
             if (other.gameObject.tag == "BlockSpell")
             {
-                pCurrentHealth -= damage.spellingBlockSpell/2;
+                pCurrentHealth -= damage.spellingBlockSpell*0.5f;
 
             }
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "HurtBox")
-        {
-            pCurrentHealth -= damage.enemy;
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "HurtBox")
+    //    {
+    //        pCurrentHealth -= damage.enemy;
 
-        }
-        if (collision.gameObject.tag == "SpiderStab")
-        {
-            pCurrentHealth -= damage.spiderStab;
+    //    }
+    //    if (collision.gameObject.tag == "SpiderStab")
+    //    {
+    //        pCurrentHealth -= damage.spiderStab;
 
-        }
-        if (collision.gameObject.tag == "AntSlash")
-        {
-            pCurrentHealth -= damage.samuraiAntSlash;
+    //    }
+    //    if (collision.gameObject.tag == "AntSlash")
+    //    {
+    //        pCurrentHealth -= damage.samuraiAntSlash;
 
-        }
-        if (collision.gameObject.tag == "BlockSpell")
-        {
-            pCurrentHealth -= damage.spellingBlockSpell;
+    //    }
+    //    if (collision.gameObject.tag == "BlockSpell")
+    //    {
+    //        pCurrentHealth -= damage.spellingBlockSpell;
 
-        }
-    }
+    //    }
+    //}
     // Update is called once per frame
     void Update()
     {
-        if(pAttack.blockerBool == true)
-        {
-            pBlock = true;
-        }
-        if(pAttack.blockerBool == false)
-        {
-            pBlock = false;
-        }
         if (pCurrentHealth <= pMinHealth)
         {
             //Debug.Log("Game Over");
             SceneManager.LoadScene("GameOver");
-            //gameObject.SetActive(false);
+            gameObject.SetActive(false);
 
 
 
         }
+        //if (pAttack.blockerBool == true)
+        //{
+        //    pBlock = true;
+        //}
+        //if(pAttack.blockerBool == false)
+        //{
+        //    pBlock = false;
+        //}
+        
     }
 }
