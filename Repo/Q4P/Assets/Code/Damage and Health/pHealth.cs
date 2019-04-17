@@ -74,6 +74,7 @@ public class pHealth : MonoBehaviour
 
         }
 
+
         if (pAttack.blockerBool == true)
         {
             pBlock = true;
@@ -82,6 +83,6 @@ public class pHealth : MonoBehaviour
         {
             pBlock = false;
         }
-
+        
     }
 }
