@@ -6,7 +6,7 @@ public class EnemySpawn : MonoBehaviour
 {
 
     public GameObject Enemy;
-    public float sTime = .2f;
+    public float sTime = 2f;
     public Transform[] sPoints;
     
     void Start()

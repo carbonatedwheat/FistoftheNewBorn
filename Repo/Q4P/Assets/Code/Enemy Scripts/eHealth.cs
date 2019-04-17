@@ -15,17 +15,19 @@ public class eHealth : MonoBehaviour {
         eCurrentHealth = eMaxHealth;
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "HitBoxLight")
+        if(other.gameObject.tag == "HitBoxLight")
         {
-            eCurrentHealth -= damage.Light;
             Debug.Log("Checkem");
+            eCurrentHealth -= damage.Light;
+            
         }
-        if (collision.gameObject.tag == "HitBoxHeavy")
+        if (other.gameObject.tag == "HitBoxHeavy")
         {
-            eCurrentHealth -= damage.Heavy;
             Debug.Log("dubs");
+            eCurrentHealth -= damage.Heavy;
+            
         }
 
     }
@@ -33,7 +35,7 @@ public class eHealth : MonoBehaviour {
     void Update () {
 		if(eCurrentHealth <= eMinHealth)
         {
-            Host.SetActive(false);
+            gameObject.SetActive(false);
         }
 	}
 }

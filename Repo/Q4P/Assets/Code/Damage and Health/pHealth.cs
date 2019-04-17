@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class pHealth : MonoBehaviour
 {
@@ -15,7 +16,30 @@ public class pHealth : MonoBehaviour
         pCurrentHealth = pMaxHealth;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "HurtBox")
+        {
+            pCurrentHealth -= damage.enemy;
+        }
+        if (other.gameObject.tag == "SpiderStab")
+        {
+            pCurrentHealth -= damage.spiderStab;
+
+        }
+        if (other.gameObject.tag == "AntSlash")
+        {
+            pCurrentHealth -= damage.samuraiAntSlash;
+
+        }
+        if (other.gameObject.tag == "BlockSpell")
+        {
+            pCurrentHealth -= damage.spellingBlockSpell;
+
+        }
+    }
+
+        private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "HurtBox")
         {
@@ -43,8 +67,11 @@ public class pHealth : MonoBehaviour
     {
         if (pCurrentHealth <= pMinHealth)
         {
-            Debug.Log("Game Over");
-            gameObject.SetActive(false);
+            //Debug.Log("Game Over");
+            SceneManager.LoadScene("GameOver");
+            //gameObject.SetActive(false);
+
+
 
         }
     }
