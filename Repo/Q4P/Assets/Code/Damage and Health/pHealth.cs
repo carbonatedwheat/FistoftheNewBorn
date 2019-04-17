@@ -96,7 +96,7 @@ public class pHealth : MonoBehaviour
 
 
         }
-<<<<<<< HEAD
+
         //if (pAttack.blockerBool == true)
         //{
         //    pBlock = true;
@@ -105,17 +105,7 @@ public class pHealth : MonoBehaviour
         //{
         //    pBlock = false;
         //}
-        
-=======
-        if (pAttack.blockerBool == true)
-        {
-            pBlock = true;
-        }
-        if(pAttack.blockerBool == false)
-        {
-            pBlock = false;
-        }
        
->>>>>>> baff5bb0d51678e34c35cbd90b7aabc5f01b1514
+
     }
 }
