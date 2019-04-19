@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-
+    int enemiesLeft = 0;
     public GameObject Enemy;
     public float sTime = 2f;
     public Transform[] sPoints;
@@ -26,7 +26,7 @@ public class EnemySpawn : MonoBehaviour
     void Update()
     {
 
-
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
         
     }
 }

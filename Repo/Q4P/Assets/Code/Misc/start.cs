@@ -8,7 +8,8 @@ public class start : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     private void OnMouseDown()
     {

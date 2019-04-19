@@ -1,18 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class pAttack : MonoBehaviour
+public class pGeneral : MonoBehaviour
 {
     public GameObject lightAttack;
     public GameObject heavyAttack;
     public GameObject blocker;
     public WaitForSeconds comboLimit;
     public bool light1, heavy1, light2, heavy2, light3, heavy3, blockerBool;
-    pHealth pHealth;
+    
+    public float pMaxHealth;
+    public float pMinHealth;
+    public float pCurrentHealth;
+    public bool pBlock;
+    public pAttack pAttack;
+    public DamageScript damage;
     // Start is called before the first frame update
     void Start()
     {
+        pCurrentHealth = pMaxHealth;
         lightAttack.SetActive(false);
         heavyAttack.SetActive(false);
         blocker.SetActive(false);
@@ -21,20 +29,24 @@ public class pAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (pCurrentHealth <= pMinHealth)
+        {
+            //Debug.Log("Game Over");
+            SceneManager.LoadScene("GameOver");
+            gameObject.SetActive(false);
+        }
         if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
         {
             blocker.SetActive(true);
             lightAttack.SetActive(false);
             heavyAttack.SetActive(false);
             blockerBool = true;
-            //pHealth.pBlock.Equals(true);
             Debug.Log("blocker enabled");
         }
         if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
         {
             blocker.SetActive(false);
             blockerBool = false;
-            //pHealth.pBlock = false;
         }
         if (blockerBool == false)
         {
@@ -86,6 +98,51 @@ public class pAttack : MonoBehaviour
                 }
             }
         }
-       
+
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (blockerBool == false)
+        {
+            if (other.gameObject.tag == "HurtBox")
+            {
+                pCurrentHealth -= damage.enemy;
+            }
+            if (other.gameObject.tag == "SpiderStab")
+            {
+                pCurrentHealth -= damage.spiderStab;
+
+            }
+            if (other.gameObject.tag == "AntSlash")
+            {
+                pCurrentHealth -= damage.samuraiAntSlash;
+
+            }
+        }
+        if (blockerBool == true)
+        {
+            if (other.gameObject.tag == "BlockSpell")
+            {
+                pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
+
+            }
+            if (other.gameObject.tag == "SpiderStab")
+            {
+                pCurrentHealth -= damage.spiderStab * 0.5f;
+
+            }
+            if (other.gameObject.tag == "AntSlash")
+            {
+                pCurrentHealth -= damage.samuraiAntSlash * 0.5f;
+                Debug.Log("Reduced Damage");
+            }
+            if (other.gameObject.tag == "BlockSpell")
+            {
+                pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
+
+            }
+        }
+    }
+
 }
+
