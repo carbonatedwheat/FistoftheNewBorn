@@ -11,7 +11,7 @@ public class EnemySpawn : MonoBehaviour
     
     void Start()
     {
-
+        enemiesLeft = 10;
         InvokeRepeating("Spawn", sTime, sTime);
         
     }
