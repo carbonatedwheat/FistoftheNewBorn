@@ -1,16 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class pGeneral : MonoBehaviour
 {
-    public GameObject lightAttack, heavyAttack, blocker;//pBlock;
+    public GameObject lightAttack;
+    public GameObject heavyAttack;
+    public GameObject blocker;
     public WaitForSeconds comboLimit;
     public bool light1, heavy1, light2, heavy2, light3, heavy3, blockerBool;
-    public Slider healthSlider;
-    public float pMaxHealth, pMinHealth, pCurrentHealth;
+    
+    public float pMaxHealth;
+    public float pMinHealth;
+    public float pCurrentHealth;
+    public bool pBlock;
     public pAttack pAttack;
     public DamageScript damage;
     // Start is called before the first frame update
@@ -25,7 +29,6 @@ public class pGeneral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //healthSlider.value = pCurrentHealth;
         if (pCurrentHealth <= pMinHealth)
         {
             //Debug.Log("Game Over");
@@ -101,9 +104,9 @@ public class pGeneral : MonoBehaviour
     {
         if (blockerBool == false)
         {
-            if (other.gameObject.tag == "KillZone")
+            if (other.gameObject.tag == "HurtBox")
             {
-                pCurrentHealth -= damage.killZone;
+                pCurrentHealth -= damage.enemy;
             }
             if (other.gameObject.tag == "SpiderStab")
             {
@@ -118,10 +121,6 @@ public class pGeneral : MonoBehaviour
         }
         if (blockerBool == true)
         {
-            if (other.gameObject.tag == "KillZone")
-            {
-                pCurrentHealth -= damage.killZone;
-            }
             if (other.gameObject.tag == "BlockSpell")
             {
                 pCurrentHealth -= damage.spellingBlockSpell * 0.5f;

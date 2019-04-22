@@ -23,7 +23,7 @@ public class pHealth : MonoBehaviour
         {
             if (other.gameObject.tag == "HurtBox")
             {
-                pCurrentHealth -= damage.killZone;
+                pCurrentHealth -= damage.enemy;
             }
             if (other.gameObject.tag == "SpiderStab")
             {

@@ -13,7 +13,6 @@ TagManager:
   - AntSlash
   - BlockSpell
   - BlockBox
-  - KillZone
   layers:
   - Default
   - TransparentFX
