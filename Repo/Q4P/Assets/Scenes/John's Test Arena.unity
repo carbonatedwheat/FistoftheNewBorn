@@ -7409,6 +7409,7 @@ Transform:
   m_PrefabInstance: {fileID: 965528562}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1001 &3680911262130935154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7530,6 +7531,8 @@ PrefabInstance:
     - {fileID: 3680911261617895042, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
     - {fileID: 6840039606371351207, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
+=======
+>>>>>>> parent of 5118e49... a
 =======
 >>>>>>> parent of 5118e49... a
 --- !u!4 &4119287729092704073 stripped

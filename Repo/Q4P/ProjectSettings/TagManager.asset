@@ -13,8 +13,11 @@ TagManager:
   - AntSlash
   - BlockSpell
 <<<<<<< HEAD
+<<<<<<< HEAD
   - BlockBox
   - KillZone
+=======
+>>>>>>> parent of 5118e49... a
 =======
 >>>>>>> parent of 5118e49... a
   layers:

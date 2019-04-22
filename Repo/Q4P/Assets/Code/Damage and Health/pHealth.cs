@@ -21,6 +21,7 @@ public class pHealth : MonoBehaviour
         if (other.gameObject.tag == "HurtBox")
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (other.gameObject.tag == "HurtBox")
             {
                 pCurrentHealth -= damage.killZone;
@@ -29,11 +30,16 @@ public class pHealth : MonoBehaviour
             {
                 pCurrentHealth -= damage.spiderStab;
 =======
+=======
+>>>>>>> parent of 5118e49... a
             pCurrentHealth -= damage.enemy;
         }
         if (other.gameObject.tag == "SpiderStab")
         {
             pCurrentHealth -= damage.spiderStab;
+<<<<<<< HEAD
+>>>>>>> parent of 5118e49... a
+=======
 >>>>>>> parent of 5118e49... a
 
         }
@@ -80,8 +86,13 @@ public class pHealth : MonoBehaviour
             //Debug.Log("Game Over");
             SceneManager.LoadScene("GameOver");
             //gameObject.SetActive(false);
+<<<<<<< HEAD
 
 
+=======
+
+
+>>>>>>> parent of 5118e49... a
 
         }
     }
