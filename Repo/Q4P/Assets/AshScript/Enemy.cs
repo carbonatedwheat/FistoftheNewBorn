@@ -8,7 +8,6 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float Max;
     public float Min;
-    public bool inRange;
     public Transform Player;
     private bool paused = false;
     public float AttackDur = 2f;

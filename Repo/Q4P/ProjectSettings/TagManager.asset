@@ -12,8 +12,11 @@ TagManager:
   - SpiderStab
   - AntSlash
   - BlockSpell
+<<<<<<< HEAD
   - BlockBox
   - KillZone
+=======
+>>>>>>> parent of 5118e49... a
   layers:
   - Default
   - TransparentFX

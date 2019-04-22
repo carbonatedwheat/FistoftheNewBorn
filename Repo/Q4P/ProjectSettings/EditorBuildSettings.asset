@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Screen.unity
     guid: 3f06ffa8f2f014f47bd44244cbecec61
   - enabled: 1
-    path: Assets/Scenes/Seth.unity
-    guid: 6c4cd900bac003645abab66ebb5c24f4
-  - enabled: 1
-    path: Assets/Scenes/Niko.unity
-    guid: 314d8ca0c65d1f04486a952b6ac05e41
-  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: c746bc27af5bae34a833ef1e57c00c41
   - enabled: 1
