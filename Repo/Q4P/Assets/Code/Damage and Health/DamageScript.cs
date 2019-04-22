@@ -12,7 +12,7 @@ public class DamageScript : MonoBehaviour
 
     public float Light;
     public float Heavy;
-    public float enemy; //generic enemy damage values
+    public float killZone;// the out of bounds killbox
     public float spiderStab, samuraiAntSlash,
         spellingBlockSpell; //Spider stabbing, samurai ant slash, and Spelling Block Spell attack values
    
