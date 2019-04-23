@@ -26,7 +26,7 @@ public class EnemySpawn : MonoBehaviour
     void Update()
     {
 
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         
     }
 }
