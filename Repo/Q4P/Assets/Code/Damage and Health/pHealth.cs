@@ -98,9 +98,12 @@ public class pHealth : MonoBehaviour
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
+>>>>>>> parent of b4130e9... save
+=======
 >>>>>>> parent of b4130e9... save
         if (pAttack.blockerBool == true)
         {
@@ -114,6 +117,21 @@ public class pHealth : MonoBehaviour
         
 =======
 
+=======
+        //if (pAttack.blockerBool == true)
+        //{
+        //    pBlock = true;
+        //}
+        //if(pAttack.blockerBool == false)
+        //{
+        //    pBlock = false;
+        //}
+       
+>>>>>>> e7f2df94e69099b15b1faf2fbaeb4d099b5f3c57
+
+<<<<<<< HEAD
+>>>>>>> parent of b4130e9... save
+=======
 =======
         //if (pAttack.blockerBool == true)
         //{
