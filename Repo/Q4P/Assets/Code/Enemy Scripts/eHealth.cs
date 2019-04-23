@@ -8,7 +8,7 @@ public class eHealth : MonoBehaviour {
     public float eMinHealth;                           
     public float eCurrentHealth;
     public GameObject Host;
-
+    public WinCond wC;
     public DamageScript damage;
 	// Use this for initialization
 	void Start () {
@@ -35,6 +35,7 @@ public class eHealth : MonoBehaviour {
     void Update () {
 		if(eCurrentHealth <= eMinHealth)
         {
+            wC.Score++;
             gameObject.SetActive(false);
         }
 	}
