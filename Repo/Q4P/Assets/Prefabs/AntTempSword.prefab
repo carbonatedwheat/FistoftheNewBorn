@@ -784,6 +784,7 @@ MonoBehaviour:
   eMaxHealth: 20
   eMinHealth: 0
   eCurrentHealth: 0
+  pointValue: 5
   Host: {fileID: 1624277014724326957}
   wC: {fileID: 0}
   damage: {fileID: 0}
