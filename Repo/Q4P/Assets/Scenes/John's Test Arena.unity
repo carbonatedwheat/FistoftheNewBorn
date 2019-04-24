@@ -6506,14 +6506,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1898837701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4add9be414314c04097baa3cbf8fa454, type: 3}
+  m_Script: {fileID: 11500000, guid: 0691282d813100742ba02fd3a74daf21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesLeft: 0
-  Enemy: {fileID: 1066424096}
-  sTime: 5
-  sPoints:
+  enemy: {fileID: 1066424096}
+  spawnTime: 1
+  enemyCount: 0
+  spawnPoints:
   - {fileID: 640967907}
+  Wave: 0
+  wave1Done: 0
 --- !u!4 &1898837703
 Transform:
   m_ObjectHideFlags: 0
