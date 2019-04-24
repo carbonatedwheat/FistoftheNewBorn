@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class eHealth : MonoBehaviour {
 
-    public float eMaxHealth;
-    public float eMinHealth;                           
-    public float eCurrentHealth;
+    public float eMaxHealth, eMinHealth, eCurrentHealth;
+    public int pointValue;
     public GameObject Host;
     public WinCond wC;
     public DamageScript damage;
@@ -35,7 +34,7 @@ public class eHealth : MonoBehaviour {
     void Update () {
 		if(eCurrentHealth <= eMinHealth)
         {
-            wC.Score++;
+            wC.Score += pointValue;
             gameObject.SetActive(false);
         }
 	}
