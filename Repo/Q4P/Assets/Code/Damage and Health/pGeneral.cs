@@ -7,10 +7,9 @@ using UnityEngine.SceneManagement;
 public class pGeneral : MonoBehaviour
 {
     public GameObject lightAttack, heavyAttack, blocker;//pBlock;
-    public WaitForSeconds comboLimit;
     public bool light1, heavy1, light2, heavy2, light3, heavy3, blockerBool;
     public Slider healthSlider;
-    public float pMaxHealth, pMinHealth, pCurrentHealth;
+    public float pMaxHealth, pMinHealth, pCurrentHealth, attackTimer, attackCd;
     public pAttack pAttack;
     public DamageScript damage;
     // Start is called before the first frame update
