@@ -9,7 +9,7 @@ public class pAttack : MonoBehaviour
     public GameObject blocker;
     public WaitForSeconds comboLimit;
     public bool light1, heavy1, light2, heavy2, light3, heavy3, blockerBool;
-    pHealth pHealth;
+
     // Start is called before the first frame update
     void Start()
     {

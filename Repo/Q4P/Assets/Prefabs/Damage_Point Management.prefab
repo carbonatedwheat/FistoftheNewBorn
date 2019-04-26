@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30593387}
   - component: {fileID: 560814134}
-  - component: {fileID: 7653619141276494305}
+  - component: {fileID: 2440225636684922431}
   m_Layer: 0
   m_Name: Damage_Point Management
   m_TagString: Untagged
@@ -50,7 +50,7 @@ MonoBehaviour:
   spiderStab: 15
   samuraiAntSlash: 8
   spellingBlockSpell: 10
---- !u!114 &7653619141276494305
+--- !u!114 &2440225636684922431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,9 +59,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 30593386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d4336cbfea9a3b488940af2d156d82a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c4b5e86ff2688b43bb44269f38cfdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: 0
-  WinCondition: 0
   StartingScore: 0
+  WinCondition: 20
+  Score: 0

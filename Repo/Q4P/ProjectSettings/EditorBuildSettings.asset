@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/John's Test Arena.unity
     guid: 633578da8f762334694993a54080b412
+  - enabled: 1
+    path: Assets/Scenes/Victory Screen.unity
+    guid: 8c82441cc8912f14e8e02a031ca1200e
   m_configObjects: {}

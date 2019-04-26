@@ -1,111 +1,112 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class pHealth : MonoBehaviour
-{
-    public float pMaxHealth;
-    public float pMinHealth;
-    public float pCurrentHealth;
-    public bool pBlock;
-    public pAttack pAttack;
-    public DamageScript damage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        pCurrentHealth = pMaxHealth;
-    }
+﻿//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.SceneManagement;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (pBlock == false)
-        {
-            if (other.gameObject.tag == "HurtBox")
-            {
-                pCurrentHealth -= damage.killZone;
-            }
-            if (other.gameObject.tag == "SpiderStab")
-            {
-                pCurrentHealth -= damage.spiderStab;
+//public class pHealth : MonoBehaviour
+//{
+//    //public float pMaxHealth;
+//    //public float pMinHealth;
+//    //public float pCurrentHealth;
+//    //public bool pBlock;
+//    //public pAttack pAttack;
+//    //public DamageScript damage;
+//    //// Start is called before the first frame update
+//    //void Start()
+//    //{
+//    //    pCurrentHealth = pMaxHealth;
+//    //}
 
-            }
-            if (other.gameObject.tag == "AntSlash")
-            {
-                pCurrentHealth -= damage.samuraiAntSlash;
+//    //private void OnTriggerEnter(Collider other)
+//    //{
+//    //    if (pBlock == false)
+//    //    {
+//    //        if (other.gameObject.tag == "HurtBox")
+//    //        {
+//    //            pCurrentHealth -= damage.killZone;
+//    //        }
+//    //        if (other.gameObject.tag == "SpiderStab")
+//    //        {
+//    //            pCurrentHealth -= damage.spiderStab;
 
-            }
-        }
-        if (pBlock == true)
-        {
-            if (other.gameObject.tag == "BlockSpell")
-            {
-                pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
+//    //        }
+//    //        if (other.gameObject.tag == "AntSlash")
+//    //        {
+//    //            pCurrentHealth -= damage.samuraiAntSlash;
 
-            }
-            if (other.gameObject.tag == "SpiderStab")
-            {
-                pCurrentHealth -= damage.spiderStab * 0.5f;
+//    //        }
+//    //    }
+//    //    if (pBlock == true)
+//    //    {
+//    //        if (other.gameObject.tag == "BlockSpell")
+//    //        {
+//    //            pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
 
-            }
-            if (other.gameObject.tag == "AntSlash")
-            {
-                pCurrentHealth -= damage.samuraiAntSlash * 0.5f;
-                Debug.Log("Reduced Damage");
-            }
-            if (other.gameObject.tag == "BlockSpell")
-            {
-                pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
+//    //        }
+//    //        if (other.gameObject.tag == "SpiderStab")
+//    //        {
+//    //            pCurrentHealth -= damage.spiderStab * 0.5f;
 
-            }
-        }
-    }
+//    //        }
+//    //        if (other.gameObject.tag == "AntSlash")
+//    //        {
+//    //            pCurrentHealth -= damage.samuraiAntSlash * 0.5f;
+//    //            Debug.Log("Reduced Damage");
+//    //        }
+//    //        if (other.gameObject.tag == "BlockSpell")
+//    //        {
+//    //            pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "HurtBox")
-    //    {
-    //        pCurrentHealth -= damage.enemy;
+//    //        }
+//    //    }
+//    //}
 
-    //    }
-    //    if (collision.gameObject.tag == "SpiderStab")
-    //    {
-    //        pCurrentHealth -= damage.spiderStab;
+//    ////private void OnCollisionEnter(Collision collision)
+//    ////{
+//    ////    if (collision.gameObject.tag == "HurtBox")
+//    ////    {
+//    ////        pCurrentHealth -= damage.enemy;
 
-    //    }
-    //    if (collision.gameObject.tag == "AntSlash")
-    //    {
-    //        pCurrentHealth -= damage.samuraiAntSlash;
+//    ////    }
+//    ////    if (collision.gameObject.tag == "SpiderStab")
+//    ////    {
+//    ////        pCurrentHealth -= damage.spiderStab;
 
-    //    }
-    //    if (collision.gameObject.tag == "BlockSpell")
-    //    {
-    //        pCurrentHealth -= damage.spellingBlockSpell;
+//    ////    }
+//    ////    if (collision.gameObject.tag == "AntSlash")
+//    ////    {
+//    ////        pCurrentHealth -= damage.samuraiAntSlash;
 
-    //    }
-    //}
-    // Update is called once per frame
-    void Update()
-    {
-        if (pCurrentHealth <= pMinHealth)
-        {
-            //Debug.Log("Game Over");
-            SceneManager.LoadScene("GameOver");
-            gameObject.SetActive(false);
+//    ////    }
+//    ////    if (collision.gameObject.tag == "BlockSpell")
+//    ////    {
+//    ////        pCurrentHealth -= damage.spellingBlockSpell;
 
-
-
-        }
+//    ////    }
+//    ////}
+//    //// Update is called once per frame
+//    //void Update()
+//    //{
+//    //    if (pCurrentHealth <= pMinHealth)
+//    //    {
+//    //        //Debug.Log("Game Over");
+//    //        SceneManager.LoadScene("GameOver");
+//    //        gameObject.SetActive(false);
 
 
-        if (pAttack.blockerBool == true)
-        {
-            pBlock = true;
-        }
-        if (pAttack.blockerBool == false)
-        {
-            pBlock = false;
-        }
 
-    }
-}
+//    //    }
+
+
+//    //    if (pAttack.blockerBool == true)
+//    //    {
+//    //        pBlock = true;
+//    //    }
+//    //    if (pAttack.blockerBool == false)
+//    //    {
+//    //        pBlock = false;
+//    //    }
+
+//    //}
+//}
