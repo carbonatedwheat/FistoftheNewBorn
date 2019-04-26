@@ -210,8 +210,11 @@ MonoBehaviour:
   pMaxHealth: 20
   pMinHealth: 0
   pCurrentHealth: 0
+  attackTimer: 0
+  attackCd: 0
   pAttack: {fileID: 0}
   damage: {fileID: 0}
+  anim: {fileID: 2573999530657812268}
 --- !u!95 &2573999530657812268
 Animator:
   serializedVersion: 3

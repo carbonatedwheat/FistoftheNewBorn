@@ -2429,6 +2429,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e54f363a13f219a4bb07bc17fd238089, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5254b6b13466255498e3daed08cb43da, type: 3}
+--- !u!95 &732518166 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2573999530657812268, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+    type: 3}
+  m_PrefabInstance: {fileID: 3680911262130935154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &758278886 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
@@ -7412,6 +7418,11 @@ PrefabInstance:
       propertyPath: damage
       value: 
       objectReference: {fileID: 560814134}
+    - target: {fileID: 5448892389681609874, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 732518166}
     - target: {fileID: 8643095569095074859, guid: a7aa0fecaed5fab4fbb20197a5d53141,
         type: 3}
       propertyPath: m_IsActive
