@@ -70,7 +70,7 @@ public class EnemySpawn2 : MonoBehaviour
        
         if (Wave == 1)
         {
-            if (enemyCount == 0)
+            if (enemyCount == 1)
             {
                 isSpawning = true;
             }
@@ -78,7 +78,7 @@ public class EnemySpawn2 : MonoBehaviour
             {
                 isSpawning = false;
             }
-            if(enemyCount == 0)
+            if(enemyCount == 1)
             {
                 
                 NextWave();
@@ -89,14 +89,16 @@ public class EnemySpawn2 : MonoBehaviour
         else if (Wave == 2)
         {
             
-            if (enemyCount == 5)
+            if (enemyCount == 10)
             {
                 isSpawning = false;
             }
-            if (enemyCount >= 0)
+            if (enemyCount == 0)
             {
                 isSpawning = true;
             }
+            
+
         }
 
         Spawning();
