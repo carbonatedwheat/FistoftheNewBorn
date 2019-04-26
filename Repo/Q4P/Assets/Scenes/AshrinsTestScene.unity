@@ -474,6 +474,8 @@ MonoBehaviour:
   enemyCount: 10
   spawnPoints:
   - {fileID: 2062673531}
+  Wave: 0
+  wave1Done: 0
 --- !u!1 &1770180447 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7524850116082578007, guid: 5af469b212724124b901abd49637f475,
@@ -495,7 +497,9 @@ MonoBehaviour:
   eMaxHealth: 0
   eMinHealth: 0
   eCurrentHealth: 0
+  pointValue: 0
   Host: {fileID: 0}
+  wC: {fileID: 0}
   damage: {fileID: 0}
 --- !u!1 &1904558384 stripped
 GameObject:
@@ -535,7 +539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Light: 10
   Heavy: 10
-  enemy: 0
+  killZone: 0
   spiderStab: 0
   samuraiAntSlash: 0
   spellingBlockSpell: 0
