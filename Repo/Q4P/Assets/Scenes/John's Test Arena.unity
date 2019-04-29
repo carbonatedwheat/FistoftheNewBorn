@@ -112,6 +112,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &890387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1049673948873309084, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+    type: 3}
+  m_PrefabInstance: {fileID: 3680911262130935154}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8880ed87ff01047a364e10c3a7e0d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &20324913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4119287729092704073, guid: 5254b6b13466255498e3daed08cb43da,
@@ -2429,12 +2441,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e54f363a13f219a4bb07bc17fd238089, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5254b6b13466255498e3daed08cb43da, type: 3}
---- !u!95 &732518166 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2573999530657812268, guid: a7aa0fecaed5fab4fbb20197a5d53141,
-    type: 3}
-  m_PrefabInstance: {fileID: 3680911262130935154}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &758278886 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
@@ -5339,6 +5345,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e54f363a13f219a4bb07bc17fd238089, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5254b6b13466255498e3daed08cb43da, type: 3}
+--- !u!95 &1578444402 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2573999530657812268, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+    type: 3}
+  m_PrefabInstance: {fileID: 3680911262130935154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1597458875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7373,6 +7385,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2573999530657812268, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 08e0d3d3ff3a3af4fa7a950b0a6b0af7, type: 2}
     - target: {fileID: 6840039606371351207, guid: a7aa0fecaed5fab4fbb20197a5d53141,
         type: 3}
       propertyPath: blocker
@@ -7420,9 +7437,14 @@ PrefabInstance:
       objectReference: {fileID: 560814134}
     - target: {fileID: 5448892389681609874, guid: a7aa0fecaed5fab4fbb20197a5d53141,
         type: 3}
+      propertyPath: heavy2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5448892389681609874, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
       propertyPath: anim
       value: 
-      objectReference: {fileID: 732518166}
+      objectReference: {fileID: 1578444402}
     - target: {fileID: 8643095569095074859, guid: a7aa0fecaed5fab4fbb20197a5d53141,
         type: 3}
       propertyPath: m_IsActive
@@ -7443,11 +7465,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.2230002
       objectReference: {fileID: 0}
-    - target: {fileID: 2573999530657812268, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+    - target: {fileID: 330791426784426039, guid: a7aa0fecaed5fab4fbb20197a5d53141,
         type: 3}
-      propertyPath: m_Controller
+      propertyPath: G
       value: 
-      objectReference: {fileID: 9100000, guid: 08e0d3d3ff3a3af4fa7a950b0a6b0af7, type: 2}
+      objectReference: {fileID: 890387}
+    - target: {fileID: 1049673948873309084, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
+      propertyPath: damage
+      value: 
+      objectReference: {fileID: 560814134}
+    - target: {fileID: 1049673948873309084, guid: a7aa0fecaed5fab4fbb20197a5d53141,
+        type: 3}
+      propertyPath: pMaxHealth
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3680911261617895042, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
     - {fileID: 6840039606371351207, guid: a7aa0fecaed5fab4fbb20197a5d53141, type: 3}
