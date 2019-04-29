@@ -13,7 +13,7 @@ public class pGeneral : MonoBehaviour
     public pAttack pAttack;
     public DamageScript damage;
     public Animator anim;
-    public AudioClip placeHolder;
+    public AudioClip placeHolder, punch1, punch2, punch3, punch4, punch5, punch6;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +25,11 @@ public class pGeneral : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (pCurrentHealth > pMaxHealth)
+        {
+            pCurrentHealth = pMaxHealth;
+        }
         //healthSlider.value = pCurrentHealth;
         if (pCurrentHealth <= pMinHealth)
         {
@@ -39,10 +44,11 @@ public class pGeneral : MonoBehaviour
             heavyAttack.SetActive(false);
             blockerBool = true;
             Debug.Log("blocker enabled");
+            
         }
         if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
         {
-            anim.Play("idle");
+            anim.Play("Idle");
             blocker.SetActive(false);
             blockerBool = false;
         }
@@ -51,14 +57,14 @@ public class pGeneral : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 lightAttack.SetActive(true);
-                anim.Play("lightpunch");
+                anim.Play("Light Attack Combo");
                 Debug.Log("Neutral Light");
                 light1 = true;
             }
             if (Input.GetMouseButtonDown(1))
             {
                 heavyAttack.SetActive(true);
-                anim.Play("heavypunch");
+                anim.Play("Heavy Attack Combo");
                 Debug.Log("Neutral Heavy");
                 heavy1 = true;
             }
