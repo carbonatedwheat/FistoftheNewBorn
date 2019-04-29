@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
 public class pGeneral : MonoBehaviour
 {
     public GameObject lightAttack, heavyAttack, blocker;//pBlock;
@@ -13,6 +13,7 @@ public class pGeneral : MonoBehaviour
     public pAttack pAttack;
     public DamageScript damage;
     public Animator anim;
+    public AudioClip placeHolder;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,6 @@ public class pGeneral : MonoBehaviour
         heavyAttack.SetActive(false);
         blocker.SetActive(false);
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -52,12 +52,14 @@ public class pGeneral : MonoBehaviour
             {
                 lightAttack.SetActive(true);
                 anim.Play("lightpunch");
+                Debug.Log("Neutral Light");
                 light1 = true;
             }
             if (Input.GetMouseButtonDown(1))
             {
                 heavyAttack.SetActive(true);
                 anim.Play("heavypunch");
+                Debug.Log("Neutral Heavy");
                 heavy1 = true;
             }
             if (Input.GetMouseButtonUp(0))
@@ -68,37 +70,38 @@ public class pGeneral : MonoBehaviour
             {
                 heavyAttack.SetActive(false);
             }
-
-            //if (light1 == true)
-            //{
-            //    if (Input.GetMouseButtonDown(0))
-            //    {
-            //        Debug.Log("LightComboLight");
-            //        lightAttack.SetActive(true);
-            //        light2 = true;
-            //    }
-            //    if (Input.GetMouseButtonDown(1))
-            //    {
-            //        Debug.Log("LightComboHeavy");
-            //        heavyAttack.SetActive(true);
-            //        heavy2 = true;
-            //    }
-            //}
-            //if (heavy1 == true)
-            //{
-            //    if (Input.GetMouseButtonDown(0))
-            //    {
-            //        lightAttack.SetActive(true);
-            //        light1 = true;
-            //    }
-            //    if (Input.GetMouseButtonDown(1))
-            //    {
-            //        heavyAttack.SetActive(true);
-            //        heavy2 = true;
-            //    }
-            //}
+            if (light1 == true)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Debug.Log("Light Combo Light");
+                    lightAttack.SetActive(true);
+                    light2 = true;
+                }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    Debug.Log("Neutral Heavy");
+                    heavyAttack.SetActive(true);
+                    heavy1 = true;
+                    light1 = false;
+                }
+            }
+            if (heavy1 == true)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    lightAttack.SetActive(true);
+                    light1 = true;
+                    Debug.Log("Neutral Heavy");
+                    heavy1 = false;
+                }
+                if (Input.GetMouseButtonDown(1))
+                {
+                    heavyAttack.SetActive(true);
+                    heavy2 = true;
+                }
+            }
         }
-
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -111,12 +114,10 @@ public class pGeneral : MonoBehaviour
             if (other.gameObject.tag == "SpiderStab")
             {
                 pCurrentHealth -= damage.spiderStab;
-
             }
             if (other.gameObject.tag == "AntSlash")
             {
                 pCurrentHealth -= damage.samuraiAntSlash;
-
             }
         }
         if (blockerBool == true)
@@ -128,12 +129,10 @@ public class pGeneral : MonoBehaviour
             if (other.gameObject.tag == "BlockSpell")
             {
                 pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
-
             }
             if (other.gameObject.tag == "SpiderStab")
             {
                 pCurrentHealth -= damage.spiderStab * 0.5f;
-
             }
             if (other.gameObject.tag == "AntSlash")
             {
@@ -143,10 +142,7 @@ public class pGeneral : MonoBehaviour
             if (other.gameObject.tag == "BlockSpell")
             {
                 pCurrentHealth -= damage.spellingBlockSpell * 0.5f;
-
             }
         }
     }
-
 }
-
