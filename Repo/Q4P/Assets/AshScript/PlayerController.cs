@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float speed;
-    
+    public Animator anim;
     // Update is called once per frame
     void Update()
     {
@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
         float Ver = Input.GetAxis("Vertical");
         Vector3 playerMovement = new Vector3(Hor, 0f, Ver) * speed * Time.deltaTime;
         transform.Translate(playerMovement, Space.Self);
+        anim.Play("Idle");
 
 
     }
