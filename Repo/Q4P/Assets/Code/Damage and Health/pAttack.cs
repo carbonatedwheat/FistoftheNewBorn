@@ -8,6 +8,7 @@ public class pAttack : MonoBehaviour
     public GameObject heavyAttack;
     public GameObject blocker;
     public WaitForSeconds comboLimit;
+    public float lCD, hCD, reset;
     public bool light1, heavy1, light2, heavy2, light3, heavy3, blockerBool;
 
     // Start is called before the first frame update
@@ -42,17 +43,19 @@ public class pAttack : MonoBehaviour
             {
                 lightAttack.SetActive(true);
                 light1 = true;
+                reset = lCD + Time.time;
             }
             if (Input.GetMouseButtonDown(1))
             {
                 heavyAttack.SetActive(true);
+                reset = hCD + Time.time;
                 heavy1 = true;
             }
-            if (Input.GetMouseButtonUp(0))
+            if (!Input.GetMouseButtonDown(0) && reset <= Time.time)
             {
                 lightAttack.SetActive(false);
             }
-            if (Input.GetMouseButtonUp(1))
+            if (!Input.GetMouseButtonDown(1) && reset <= Time.time)
             {
                 heavyAttack.SetActive(false);
             }
@@ -86,6 +89,6 @@ public class pAttack : MonoBehaviour
                 }
             }
         }
-       
     }
+    
 }
