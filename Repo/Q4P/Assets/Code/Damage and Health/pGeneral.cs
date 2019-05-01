@@ -40,6 +40,8 @@ public class pGeneral : MonoBehaviour
         if (reset >= Time.time)
         {
             ok2Attack = false;
+            lightAttack.SetActive(false);
+            heavyAttack.SetActive(false);
         }
         if (reset <= Time.time)
         {
@@ -103,6 +105,7 @@ public class pGeneral : MonoBehaviour
                     if (Input.GetMouseButtonDown(0))
                     {
                         Debug.Log("Light Combo 2");
+                        lightAttack.SetActive(true);
                         anim.Play("Light2");
                         reset = lCD + Time.time;
                         ok2Attack = false;
@@ -122,16 +125,17 @@ public class pGeneral : MonoBehaviour
                         {
                             Debug.Log("Light Combo 3");
                             anim.Play("Light3");
+                            ok2Attack = false;
                             light3 = true;
-                            heavy1 = false;
                         }
                         if (Input.GetMouseButtonDown(1))
                         {
                             Debug.Log("Neutral Heavy");
+                            lightAttack.SetActive(true);
                             anim.Play("Heavy1");
                             reset = hCD + Time.time;
+                            ok2Attack = false;
                             light1 = false;
-                            heavy1 = true;
                         }
                     }
                 }

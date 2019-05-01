@@ -53,11 +53,11 @@ public class pAttack : MonoBehaviour
             }
             if (!Input.GetMouseButtonDown(0) && reset <= Time.time)
             {
-                lightAttack.SetActive(false);
+                light1 = false;
             }
             if (!Input.GetMouseButtonDown(1) && reset <= Time.time)
             {
-                heavyAttack.SetActive(false);
+                heavy1 = false;
             }
 
             if (light1 == true)
