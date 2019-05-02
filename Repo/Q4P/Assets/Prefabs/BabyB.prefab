@@ -240,9 +240,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1432210789}
-  - component: {fileID: 1432210788}
   - component: {fileID: 1432210790}
-  - component: {fileID: 1432210787}
+  - component: {fileID: 4126627415052562555}
+  - component: {fileID: 2469045206923040912}
   m_Layer: 0
   m_Name: BabyB
   m_TagString: Untagged
@@ -269,25 +269,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1432210788
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432210786}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 816d39adbb0b1be43972b5293707c686, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!136 &1432210790
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -302,7 +283,22 @@ CapsuleCollider:
   m_Height: 7.09
   m_Direction: 1
   m_Center: {x: 0.6, y: 1.18, z: -2.1}
---- !u!114 &1432210787
+--- !u!114 &4126627415052562555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432210786}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4ae8b3224322a040ae8ec3b6a01c1bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  xspeed: 5
+  G: {fileID: 0}
+--- !u!114 &2469045206923040912
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -311,7 +307,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1432210786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e27c3d895ed08f4ba1f454d90cb19f1, type: 3}
+  m_Script: {fileID: 11500000, guid: b61ac64218eedac45a77add030b68a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degreesPerSecond: 15
