@@ -57,6 +57,7 @@ public class pGeneral : MonoBehaviour
                 blocker.SetActive(true);
                 light1 = heavy1 = false;
                 blockerBool = true;
+                anim.Play("Block");
                 Debug.Log("blocker enabled");
             }
             if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
