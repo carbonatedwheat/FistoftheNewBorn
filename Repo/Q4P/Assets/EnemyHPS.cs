@@ -23,6 +23,6 @@ public class EnemyHPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bar.localScale = new Vector3(1f, E.eCurrentHealth * .2f);
+        bar.localScale = new Vector3(E.eCurrentHealth* 0.05f,1f);
     }
 }
