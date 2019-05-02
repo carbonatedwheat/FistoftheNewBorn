@@ -68,7 +68,20 @@ public class pGeneral : MonoBehaviour
             if (blockerBool == false)
             {
                 ok2Attack = true;
-               
+              
+                if (!Input.GetMouseButtonDown(0) && reset + 1.5f <= Time.time)
+                {
+                    //lightAttack.SetActive(false);
+                    light1 = false;
+                    heavy1 = false;
+                }
+                if (!Input.GetMouseButtonDown(1) && reset + 1.5f <= Time.time)
+                {
+                    //heavyAttack.SetActive(false);
+                    light1 = false;
+                    heavy1 = false;
+                }
+
                 if (Input.GetMouseButtonDown(0))
                 {
                     //lightAttack.SetActive(true);
@@ -88,18 +101,6 @@ public class pGeneral : MonoBehaviour
                     reset = hCD + Time.time;
                     ok2Attack = false;
                     heavy1 = true;
-                }
-                if (!Input.GetMouseButtonDown(0) && reset + 1.5f <= Time.time)
-                {
-                    //lightAttack.SetActive(false);
-                    light1 = false;
-                    heavy1 = false;
-                }
-                if (!Input.GetMouseButtonDown(1) && reset + 1.5f <= Time.time)
-                {
-                    //heavyAttack.SetActive(false);
-                    light1 = false;
-                    heavy1 = false;
                 }
                 if (light1 == ok2Attack == true)
                 {
@@ -129,6 +130,7 @@ public class pGeneral : MonoBehaviour
                             Debug.Log("Light Combo 3");
                             lightAttack.SetActive(true);
                             anim.Play("Light3");
+                            reset = lCD + Time.time;
                             ok2Attack = false;
                             light3 = true;
                         }
@@ -151,6 +153,7 @@ public class pGeneral : MonoBehaviour
                         Debug.Log("Neutral Light");
                         lightAttack.SetActive(true);
                         anim.Play("Light1");
+                        reset = lCD + Time.time;
                         ok2Attack = false;
                         heavy1 = false;
                         light1 = true;
@@ -171,6 +174,7 @@ public class pGeneral : MonoBehaviour
                         {
                             anim.Play("Light1");
                             lightAttack.SetActive(true);
+                            reset = lCD + Time.time;
                             light1 = true;
                             heavy1 = false;
                         }
