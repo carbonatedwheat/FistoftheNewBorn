@@ -89,20 +89,23 @@ public class EnemySpawn2 : MonoBehaviour
         else if (Wave == 2)
         {
             
+            if (enemyCount == 1)
+            {
+                isSpawning = true;
+            }
             if (enemyCount == 10)
             {
                 isSpawning = false;
             }
-            if (enemyCount == 0)
+            if (enemyCount == 1)
             {
-                isSpawning = true;
+                NextWave();
             }
-            
+
 
         }
-
+        
         Spawning();
-
     }
     
 
