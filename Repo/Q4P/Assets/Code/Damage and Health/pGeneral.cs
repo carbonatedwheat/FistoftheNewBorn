@@ -9,7 +9,6 @@ public class pGeneral : MonoBehaviour
     public GameObject lightAttack, heavyAttack, blocker;//pBlock;
     public bool light1, heavy1, light2, heavy2, light3, heavy3, blockerBool, ok2Attack;
     public float pMaxHealth, pMinHealth, pCurrentHealth, attackTimer, attackCd, lCD, hCD, reset;
-    public pAttack pAttack;
     public DamageScript damage;
     public Animator anim;
     public AudioClip placeHolder, punch1, punch2, punch3, punch4, punch5, punch6;
@@ -43,14 +42,22 @@ public class pGeneral : MonoBehaviour
             lightAttack.SetActive(false);
             heavyAttack.SetActive(false);
         }
+        if (light1 == false)
+        {
+            light2 = light3 = false;
+        }
+        if (heavy2 == false)
+        {
+            heavy2 = heavy3 = false;
+        }
         if (reset <= Time.time)
         {
-            ok2Attack = true;
             if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
             {
                 blocker.SetActive(true);
                 light1 = heavy1 = false;
                 blockerBool = true;
+                anim.Play("Block");
                 Debug.Log("blocker enabled");
             }
             if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
@@ -61,19 +68,27 @@ public class pGeneral : MonoBehaviour
             }
             if (blockerBool == false)
             {
-                if(light1 == false)
+                ok2Attack = true;
+              
+                if (!Input.GetMouseButtonDown(0) && reset + 1.5f <= Time.time)
                 {
-                    light2 = light3 = false;
+                    //lightAttack.SetActive(false);
+                    light1 = false;
+                    heavy1 = false;
                 }
-                if(heavy2 == false)
+                if (!Input.GetMouseButtonDown(1) && reset + 1.5f <= Time.time)
                 {
-                    heavy2 = heavy3 = false;
+                    //heavyAttack.SetActive(false);
+                    light1 = false;
+                    heavy1 = false;
                 }
+
                 if (Input.GetMouseButtonDown(0))
                 {
                     //lightAttack.SetActive(true);
                     Debug.Log("Neutral Light");
                     anim.Play("Light1");
+                    lightAttack.SetActive(true);
                     reset = lCD + Time.time;
                     ok2Attack = false;
                     light1 = true;
@@ -83,21 +98,10 @@ public class pGeneral : MonoBehaviour
                     //heavyAttack.SetActive(true);
                     Debug.Log("Neutral Heavy");
                     anim.Play("Heavy1");
+                    heavyAttack.SetActive(true);
                     reset = hCD + Time.time;
                     ok2Attack = false;
                     heavy1 = true;
-                }
-                if (!Input.GetMouseButtonDown(0) && reset <= Time.time)
-                {
-                    //lightAttack.SetActive(false);
-                    light1 = false;
-                    heavy1 = false;
-                }
-                if (!Input.GetMouseButtonDown(1) && reset <= Time.time)
-                {
-                    //heavyAttack.SetActive(false);
-                    light1 = false;
-                    heavy1 = false;
                 }
                 if (light1 == ok2Attack == true)
                 {
@@ -114,6 +118,7 @@ public class pGeneral : MonoBehaviour
                     if (Input.GetMouseButtonDown(1))
                     {
                         Debug.Log("Neutral Heavy");
+                        heavyAttack.SetActive(true);
                         anim.Play("Heavy1");
                         reset = hCD + Time.time;
                         ok2Attack = false;
@@ -124,14 +129,16 @@ public class pGeneral : MonoBehaviour
                         if (Input.GetMouseButtonDown(0))
                         {
                             Debug.Log("Light Combo 3");
+                            lightAttack.SetActive(true);
                             anim.Play("Light3");
+                            reset = lCD + Time.time;
                             ok2Attack = false;
                             light3 = true;
                         }
                         if (Input.GetMouseButtonDown(1))
                         {
                             Debug.Log("Neutral Heavy");
-                            lightAttack.SetActive(true);
+                            heavyAttack.SetActive(true);
                             anim.Play("Heavy1");
                             reset = hCD + Time.time;
                             ok2Attack = false;
@@ -139,13 +146,15 @@ public class pGeneral : MonoBehaviour
                         }
                     }
                 }
-                if (heavy1 == true)
+                if (heavy1 == ok2Attack == true)
                 {
                     light1 = false;
                     if (Input.GetMouseButtonDown(0))
                     {
                         Debug.Log("Neutral Light");
+                        lightAttack.SetActive(true);
                         anim.Play("Light1");
+                        reset = lCD + Time.time;
                         ok2Attack = false;
                         heavy1 = false;
                         light1 = true;
@@ -153,24 +162,27 @@ public class pGeneral : MonoBehaviour
                     if (Input.GetMouseButtonDown(1))
                     {
                         Debug.Log("Heavy Combo Heavy");
+                        heavyAttack.SetActive(true);
                         anim.Play("Heavy2");
                         reset = hCD + Time.time;
                         ok2Attack = false;
                         heavy2 = true;
                     }
-                    if(heavy2 == true )
+                    if(heavy2 == ok2Attack == true)
                     {
                         light1 = false;
                         if (Input.GetMouseButtonDown(0))
                         {
                             anim.Play("Light1");
-                            //lightAttack.SetActive(true);
+                            lightAttack.SetActive(true);
+                            reset = lCD + Time.time;
                             light1 = true;
                             heavy1 = false;
                         }
                         if (Input.GetMouseButtonDown(1))
                         {
                             anim.Play("Heavy3");
+                            heavyAttack.SetActive(true);
                             heavy3 = true;
                             light1 = false;
                         }
@@ -179,6 +191,7 @@ public class pGeneral : MonoBehaviour
             }
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (blockerBool == false)
