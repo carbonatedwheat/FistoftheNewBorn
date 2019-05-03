@@ -20,13 +20,13 @@ public class eHealth : MonoBehaviour {
         {
             Debug.Log("Checkem");
             eCurrentHealth -= damage.Light;
-            
+            Debug.Log("HEalth" + eCurrentHealth);
         }
         if (other.gameObject.tag == "HitBoxHeavy")
         {
             Debug.Log("dubs");
             eCurrentHealth -= damage.Heavy;
-            
+            Debug.Log("HEalth" + eCurrentHealth);
         }
 
     }
