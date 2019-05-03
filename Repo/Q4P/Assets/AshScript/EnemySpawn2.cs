@@ -14,6 +14,7 @@ public class EnemySpawn2 : MonoBehaviour
     //Spawn Delay Variables
     float SpawnAlarm;
     float SpawnTime = 1f;
+    public TextMesh Wavenum;
 
 
     void Start()
@@ -67,7 +68,7 @@ public class EnemySpawn2 : MonoBehaviour
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         Debug.Log("It is Wave:" + Wave);
-       
+
         if (Wave == 1)
         {
             if (enemyCount == 1)
@@ -78,17 +79,17 @@ public class EnemySpawn2 : MonoBehaviour
             {
                 isSpawning = false;
             }
-            if(enemyCount == 1)
+            if (enemyCount == 1)
             {
-                
+
                 NextWave();
 
             }
-           
+
         }
         else if (Wave == 2)
         {
-            
+
             if (enemyCount == 1)
             {
                 isSpawning = true;
@@ -104,8 +105,20 @@ public class EnemySpawn2 : MonoBehaviour
 
 
         }
+        else if (Wave == 3)
+        {
+            if (enemyCount == 1) 
+            {
+                isSpawning = true;
+            }
+           
+                
+        }
         
         Spawning();
+
+        Wavenum.text = "Wave:" + Wave;
+
     }
     
 
