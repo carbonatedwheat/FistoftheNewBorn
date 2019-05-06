@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BarzOfHealth : MonoBehaviour
 {
-    public pGeneral G;
+    public pGeneralClone G;
     public Transform bar;
 
 
