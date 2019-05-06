@@ -12,11 +12,16 @@ public class Enemy : MonoBehaviour
     public Transform Player;
     private bool paused = false;
     public float AttackDur = 2f;
+    public Transform enemy;
+    public float Emin = 3f;
+
+    float SpeedDir = 1;
 
     void Start()
     {
-        
+
         Player = GameObject.FindWithTag("Player").transform;
+        enemy = GameObject.FindWithTag("Enemy").transform;
 
     }
 
@@ -28,7 +33,7 @@ public class Enemy : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.position) >= Min)
         {
 
-            transform.position += transform.forward * speed * Time.deltaTime;
+            transform.position += transform.forward * speed*SpeedDir * Time.deltaTime;
      
         }
         if (Vector3.Distance(transform.position, Player.position) <= Max)
@@ -41,6 +46,17 @@ public class Enemy : MonoBehaviour
         {
             return;
         }
+
+        if(Vector3.Distance(transform.position, enemy.position) <= Emin)
+        {
+            SpeedDir = -1;
+
+        }else// if (Vector3.Distance(transform.position, enemy.position) > Emin)
+        {
+            SpeedDir = 1;
+        }
+
+
     }
 
     IEnumerator delay()
