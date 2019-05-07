@@ -304,8 +304,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fec7660681dcaf498ff77cb49704d91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &640967906
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +415,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c4b5e86ff2688b43bb44269f38cfdd5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1001 &791464785
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,13 +577,13 @@ PrefabInstance:
     - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
         type: 3}
       propertyPath: DropShadow
-      value: 
+      value:
       objectReference: {fileID: 6245120419443059882, guid: 91a85653ed30d7a4dbde9af49b9c58d8,
         type: 3}
     - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
         type: 3}
       propertyPath: Scoretxt
-      value: 
+      value:
       objectReference: {fileID: 5325687175167889534, guid: 23a0b7ebf9ffe8d4894a40bef01c9c2d,
         type: 3}
     - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
@@ -3389,7 +3389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 890387, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
       propertyPath: damage
-      value: 
+      value:
       objectReference: {fileID: 560814134}
     - target: {fileID: 265363295, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
       propertyPath: m_IsActive
@@ -3425,6 +3425,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -0.000012240574
       objectReference: {fileID: 0}
+    - target: {fileID: 3680911260953435006, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 26.294786
+      objectReference: {fileID: 0}
+    - target: {fileID: 3680911260953435006, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -179.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029671792, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
+      propertyPath: G
+      value:
+      objectReference: {fileID: 1135753837}
+    - target: {fileID: 2531640865685065399, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: damage
+      value:
+      objectReference: {fileID: 560814134}
+    - target: {fileID: 2531640865685065399, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: lCD
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531640865685065399, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: hCD
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578444402, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
+      propertyPath: m_Controller
+      value:
+      objectReference: {fileID: 9100000, guid: dc349f69f89060d4bad6df26670a6215, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
 --- !u!1001 &978108356
@@ -3771,8 +3804,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0691282d813100742ba02fd3a74daf21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   enemy: {fileID: 1066424096}
   spawnTime: 1
   enemyCount: 0
@@ -3864,22 +3897,22 @@ PrefabInstance:
     - target: {fileID: 1624277014724326958, guid: 287b235f7f6279f47a5a5e63a1700507,
         type: 3}
       propertyPath: Player
-      value: 
+      value:
       objectReference: {fileID: 1522964013}
     - target: {fileID: 1624277014724326955, guid: 287b235f7f6279f47a5a5e63a1700507,
         type: 3}
       propertyPath: wC
-      value: 
+      value:
       objectReference: {fileID: 758278886}
     - target: {fileID: 1624277014724326955, guid: 287b235f7f6279f47a5a5e63a1700507,
         type: 3}
       propertyPath: damage
-      value: 
+      value:
       objectReference: {fileID: 560814134}
     - target: {fileID: 1624277014147082527, guid: 287b235f7f6279f47a5a5e63a1700507,
         type: 3}
       propertyPath: Player
-      value: 
+      value:
       objectReference: {fileID: 1522964013}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287b235f7f6279f47a5a5e63a1700507, type: 3}
@@ -3944,7 +3977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 890387, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
       propertyPath: damage
-      value: 
+      value:
       objectReference: {fileID: 560814134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
