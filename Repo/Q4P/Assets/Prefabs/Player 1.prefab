@@ -234,9 +234,8 @@ GameObject:
   - component: {fileID: 638020178}
   - component: {fileID: 638020177}
   - component: {fileID: 638020176}
-  - component: {fileID: 890387}
-  - component: {fileID: 2531640865685065399}
   - component: {fileID: 1578444402}
+  - component: {fileID: 2531640865685065399}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -338,46 +337,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &890387
-MonoBehaviour:
+--- !u!95 &1578444402
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638020174}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8880ed87ff01047a364e10c3a7e0d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightAttack: {fileID: 265363295}
-  heavyAttack: {fileID: 7668598587927875121}
-  blocker: {fileID: 3767624280146627966}
-  light1: 0
-  heavy1: 0
-  light2: 0
-  heavy2: 0
-  light3: 0
-  heavy3: 0
-  blockerBool: 0
-  ok2Attack: 0
-  pMaxHealth: 100
-  pMinHealth: 0
-  pCurrentHealth: 0
-  attackTimer: 0
-  attackCd: 10
-  lCD: 0.5
-  hCD: 1
-  reset: 0
-  damage: {fileID: 0}
-  anim: {fileID: 1578444402}
-  placeHolder: {fileID: 0}
-  punch1: {fileID: 0}
-  punch2: {fileID: 0}
-  punch3: {fileID: 0}
-  punch4: {fileID: 0}
-  punch5: {fileID: 0}
-  punch6: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 6543132049b4f654385244b3d2a4a138, type: 3}
+  m_Controller: {fileID: 9100000, guid: 08e0d3d3ff3a3af4fa7a950b0a6b0af7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2531640865685065399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,25 +401,6 @@ MonoBehaviour:
   punch4: {fileID: 0}
   punch5: {fileID: 0}
   punch6: {fileID: 0}
---- !u!95 &1578444402
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638020174}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 6543132049b4f654385244b3d2a4a138, type: 3}
-  m_Controller: {fileID: 9100000, guid: 08e0d3d3ff3a3af4fa7a950b0a6b0af7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &722260408
 GameObject:
   m_ObjectHideFlags: 0

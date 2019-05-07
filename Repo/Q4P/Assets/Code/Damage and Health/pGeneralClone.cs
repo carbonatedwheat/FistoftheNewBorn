@@ -60,12 +60,16 @@ public class pGeneralClone : MonoBehaviour
             heavy2 = heavy3 = false;
         }
 
-        if (Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == false
-            || Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == false
+        if ((Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == false
             || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == false
-            || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == false)
+            || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == false)  && !Input.GetKey(KeyCode.S))
         {
             anim.Play("Walk Cycle");
+            PlayerMovement();
+        }
+        if (Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == false)
+        {
+            anim.Play("Back Walk Cycle");
             PlayerMovement();
         }
         else if (Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == true
