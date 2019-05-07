@@ -8,7 +8,9 @@ public class pGeneralClone : MonoBehaviour
 {
     public GameObject lightAttack, heavyAttack, blocker;//pBlock;
     public bool light1, heavy1, light2, heavy2, light3, heavy3, blockerBool, ok2Attack;
-    public float pMaxHealth, pMinHealth, pCurrentHealth, attackTimer, aCD, lCD, hCD, reset;
+    public bool m1Down, m2Down;
+    public bool m1Held, m2Held;
+    public float speed, pMaxHealth, pMinHealth, pCurrentHealth, attackTimer, aCD, lCD, hCD, reset;
     public DamageScript damage;
     public Animator anim;
     public AudioClip placeHolder, punch1, punch2, punch3, punch4, punch5, punch6;
@@ -16,6 +18,8 @@ public class pGeneralClone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        m1Down = false;
+        m2Down = true;
         pCurrentHealth = pMaxHealth;
         lightAttack.SetActive(false);
         heavyAttack.SetActive(false);
@@ -25,6 +29,16 @@ public class pGeneralClone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m1Down = Input.GetMouseButtonDown(0);
+        m2Down = Input.GetMouseButtonDown(1);
+        m1Held = Input.GetMouseButton(0);
+        m2Held = Input.GetMouseButton(1);
+
+        Debug.Log("B" + ":" + m1Down + " " + m2Down + " " + m1Held + " " + m2Held);
+
+       
+        // Debug.Log(Time.time + " " + aCD + " " + reset);
+
         if (pCurrentHealth > pMaxHealth)
         {
             pCurrentHealth = pMaxHealth;
@@ -36,7 +50,7 @@ public class pGeneralClone : MonoBehaviour
             SceneManager.LoadScene("GameOver");
             gameObject.SetActive(false);
         }
-        
+
         if (light1 == false)
         {
             light2 = light3 = false;
@@ -45,11 +59,25 @@ public class pGeneralClone : MonoBehaviour
         {
             heavy2 = heavy3 = false;
         }
-        if (Input.GetKey(KeyCode.W) && ok2Attack == true || Input.GetKey(KeyCode.S) && ok2Attack == true)
+
+        if (Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == false
+            || Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == false
+            || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == false
+            || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == false)
         {
             anim.Play("Walk Cycle");
+            PlayerMovement();
         }
-        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && light1 == false && heavy1 == false)
+        else if (Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == true
+                 || Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == true
+                 || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == true
+                 || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == true)
+        {
+            anim.Play("Block");
+            PlayerMovement();
+        }
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
+            && light1 == false && heavy1 == false && blockerBool == false)
         {
             anim.Play("Idle");
         }
@@ -64,14 +92,14 @@ public class pGeneralClone : MonoBehaviour
         //{
         //    reset = lCD + aCD * 2;
         //}
-        if (reset >= Time.time && aCD <= Time.time)
+        if (reset <= Time.time && aCD <= Time.time)
         {
             light1 = heavy1 = false;
         }
         if (aCD <= Time.time)
         {
             ok2Attack = true;
-            if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
+            if (m1Down == true && m2Down == true )
             {
                 blocker.SetActive(true);
                 light1 = heavy1 = false;
@@ -103,6 +131,7 @@ public class pGeneralClone : MonoBehaviour
                     anim.Play("Light1");
                     lightAttack.SetActive(true);
                     light1 = true;
+                    reset = lCD * 2 + Time.time;
                     aCD = lCD + Time.time;
                     ok2Attack = false;
                 }
@@ -116,17 +145,16 @@ public class pGeneralClone : MonoBehaviour
                     ok2Attack = false;
                     heavy1 = true;
                 }
-                
                 if (light1 == true && ok2Attack == true)
                 {
-                    heavy1 = false;
-                    if (Input.GetMouseButtonDown(0)) //Left Click for second light in the chain
+                    if (Input.GetMouseButton(0)) //Left Click for second light in the chain
                     {
                         Debug.Log("Light Combo 2");
                         lightAttack.SetActive(true);
                         anim.Play("Light2");
-                        aCD = lCD + Time.time;
                         light2 = true;
+                        reset = lCD * 2 + Time.time;
+                        aCD = lCD + Time.time;
                         ok2Attack = false;
                     }
                     if (Input.GetMouseButtonDown(1)) //Right Click to start from a neutral heavy
@@ -140,27 +168,32 @@ public class pGeneralClone : MonoBehaviour
                     }
                     if (light2 == true && ok2Attack == true)
                     {
-                        if (Input.GetMouseButtonDown(0)) //Left Click for third light in the chain
+                        //Debug.Log("LIGHT2 is TRUE    and ok2ATTACK is true " + Time.time);
+                        //heavy1 = false;
+                        Debug.Log("++++++++++++++++++" + m1Held + " " + Input.GetKey(KeyCode.E) + " " + m2Held);
+
+                        if (m1Held) /*if(Input.GetMouseButton(0))*/  //Left Click for third light in the chain
                         {
                             Debug.Log("Light Combo 3");
                             lightAttack.SetActive(true);
                             anim.Play("Light3");
                             aCD = lCD + Time.time;
+                            reset = lCD * 2 + Time.time;
                             light3 = true;
                             ok2Attack = false;
                         }
-                        if (Input.GetMouseButtonDown(1)) //Right Click to start from a neutral heavy
-                        {
-                            Debug.Log("Neutral Heavy");
-                            heavyAttack.SetActive(true);
-                            anim.Play("Heavy1");
-                            aCD = hCD + Time.time;
-                            ok2Attack = false;
-                            light1 = false;
-                        }
+                        //if (Input.GetMouseButtonDown(1)) //Right Click to start from a neutral heavy
+                        //{
+                        //    Debug.Log("Neutral Heavy");
+                        //    heavyAttack.SetActive(true);
+                        //    anim.Play("Heavy1");
+                        //    aCD = hCD + Time.time;
+                        //    ok2Attack = false;
+                        //    light1 = false;
+                        //}
                     }
                 }
-                Debug.Log((heavy1 == true && ok2Attack == true) + "  ?????????????  " + (heavy1 == ok2Attack == true));
+                //Debug.Log((heavy1 == true && ok2Attack == true) + "  ?????????????  " + (heavy1 == ok2Attack == true));
                 
                 if (heavy1 == true && ok2Attack == true)
                 {
@@ -207,6 +240,22 @@ public class pGeneralClone : MonoBehaviour
                 }
             }
         }
+
+        m1Down = Input.GetMouseButtonDown(0);
+        m2Down = Input.GetMouseButtonDown(1);
+        m1Held = Input.GetMouseButton(0);
+        m2Held = Input.GetMouseButton(1);
+
+        Debug.Log("E" + ":" + m1Down + " " + m2Down + " " + m1Held + " " + m2Held);
+
+
+    }
+    void PlayerMovement()
+    {
+        float Hor = Input.GetAxis("Horizontal");
+        float Ver = Input.GetAxis("Vertical");
+        Vector3 playerMovement = new Vector3(Hor, 0f, Ver) * speed * Time.deltaTime;
+        transform.Translate(playerMovement, Space.Self);
     }
 
     private void OnTriggerEnter(Collider other)

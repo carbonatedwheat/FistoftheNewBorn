@@ -345,7 +345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &640967907
 Transform:
   m_ObjectHideFlags: 0
@@ -3537,6 +3537,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1497136618}
+    - target: {fileID: 638020175, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6643047354468447294, guid: 6f0c95ed753676a408bdace13625e378,
         type: 3}
       propertyPath: m_Enabled
@@ -3572,6 +3576,16 @@ PrefabInstance:
       propertyPath: blocker
       value: 
       objectReference: {fileID: 1493294367}
+    - target: {fileID: 6643047354468447294, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643047354468447294, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: light3
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2029671792, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
       propertyPath: G
       value: 
@@ -3786,7 +3800,7 @@ PrefabInstance:
         type: 3}
       propertyPath: G
       value: 
-      objectReference: {fileID: 1516597415}
+      objectReference: {fileID: 459606842}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39964dff41e9d95449fa29aef4318247, type: 3}
 --- !u!1 &1493294367 stripped
@@ -3801,18 +3815,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 917456149}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1516597415 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 890387, guid: 6f0c95ed753676a408bdace13625e378,
-    type: 3}
-  m_PrefabInstance: {fileID: 917456149}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8880ed87ff01047a364e10c3a7e0d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1522964013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 190765631, guid: 6f0c95ed753676a408bdace13625e378,
@@ -4002,7 +4004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1898837702
 MonoBehaviour:
   m_ObjectHideFlags: 0
