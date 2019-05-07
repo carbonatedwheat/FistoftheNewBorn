@@ -124,7 +124,7 @@ public class pGeneral : MonoBehaviour
                     }
                     if (light2 == ok2Attack == true)
                     {
-                        if (Input.GetMouseButtonDown(0)) //Left Click for third light in the chain
+                        if (Input.GetMouseButtonDown(2)) //Left Click for third light in the chain
                         {
                             Debug.Log("Light Combo 3");
                             lightAttack.SetActive(true);

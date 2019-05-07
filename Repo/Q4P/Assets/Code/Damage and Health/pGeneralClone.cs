@@ -141,9 +141,10 @@ public class pGeneralClone : MonoBehaviour
                     Debug.Log(":::::::::::::::::::::::::::::Neutral Heavy");
                     anim.Play("Heavy1");
                     heavyAttack.SetActive(true);
+                    heavy1 = true;
+                    reset = hCD * 2 + Time.time;
                     aCD = hCD + Time.time;
                     ok2Attack = false;
-                    heavy1 = true;
                 }
                 if (light1 == true && ok2Attack == true)
                 {
@@ -157,12 +158,13 @@ public class pGeneralClone : MonoBehaviour
                         aCD = lCD + Time.time;
                         ok2Attack = false;
                     }
-                    if (Input.GetMouseButtonDown(1)) //Right Click to start from a neutral heavy
+                    if (Input.GetMouseButton(1)) //Right Click to start from a neutral heavy
                     {
                         Debug.Log("Neutral Heavy");
                         heavyAttack.SetActive(true);
                         anim.Play("Heavy1");
-                        light1 = false;
+                        heavy1 = true;
+                        reset = hCD * 2 + Time.time;
                         aCD = hCD + Time.time;
                         ok2Attack = false;
                     }
@@ -172,68 +174,73 @@ public class pGeneralClone : MonoBehaviour
                         //heavy1 = false;
                         Debug.Log("++++++++++++++++++" + m1Held + " " + Input.GetKey(KeyCode.E) + " " + m2Held);
 
-                        if (m1Held) /*if(Input.GetMouseButton(0))*/  //Left Click for third light in the chain
+                        if (Input.GetMouseButton(2)) /*if(Input.GetMouseButton(0))*/  //Left Click for third light in the chain
                         {
                             Debug.Log("Light Combo 3");
                             lightAttack.SetActive(true);
                             anim.Play("Light3");
-                            aCD = lCD + Time.time;
                             reset = lCD * 2 + Time.time;
+                            aCD = lCD + Time.time;
                             light3 = true;
                             ok2Attack = false;
                         }
-                        //if (Input.GetMouseButtonDown(1)) //Right Click to start from a neutral heavy
+                        //if (Input.GetMouseButton(1)) //Right Click to start from a neutral heavy
                         //{
                         //    Debug.Log("Neutral Heavy");
                         //    heavyAttack.SetActive(true);
                         //    anim.Play("Heavy1");
+                        //    reset = hCD * 2 + Time.time;
                         //    aCD = hCD + Time.time;
                         //    ok2Attack = false;
                         //    light1 = false;
                         //}
                     }
                 }
-                //Debug.Log((heavy1 == true && ok2Attack == true) + "  ?????????????  " + (heavy1 == ok2Attack == true));
+                //Debug.Log((heavy1 == true && ok2Attack == true) + "  ?????????????  " 
+                //+ (heavy1 == ok2Attack == true));
                 
                 if (heavy1 == true && ok2Attack == true)
                 {
                     light1 = false;
-                    if (Input.GetMouseButtonDown(0)) //Left Click to start from a neutral light
+                    if (Input.GetMouseButton(0)) //Left Click to start from a neutral light
                     {
                         Debug.Log("Neutral Light");
                         lightAttack.SetActive(true);
                         anim.Play("Light1");
+                        reset = hCD * 2 + Time.time;
                         aCD = lCD + Time.time;
                         ok2Attack = false;
                         heavy1 = false;
                         light1 = true;
                     }
-                    if (Input.GetMouseButtonDown(1)) //Right Click for second heavy in the chain
+                    if (Input.GetMouseButton(1)) //Right Click for second heavy in the chain
                     {
                         Debug.Log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Heavy Combo Heavy");
                         heavyAttack.SetActive(true);
                         anim.Play("Heavy2");
+                        heavy2 = true;
+                        reset = hCD * 2 + Time.time;
                         aCD = hCD + Time.time;
                         ok2Attack = false;
-                        heavy2 = true;
                     }
                     if (heavy2 == true && ok2Attack == true)
                     {
                         light1 = false;
-                        if (Input.GetMouseButtonDown(0)) //Left Click to start from a neutral light
-                        {
-                            anim.Play("Light1");
-                            lightAttack.SetActive(true);
-                            light1 = true;
-                            aCD = lCD + Time.time;
-                            heavy1 = false;
-                        }
-                        if (Input.GetMouseButtonDown(1)) //Right Click for third heavy in the chain
+                        //if (Input.GetMouseButton(0)) //Left Click to start from a neutral light
+                        //{
+                        //    anim.Play("Light1");
+                        //    lightAttack.SetActive(true);
+                        //    light1 = true;
+                        //    aCD = lCD + Time.time;
+                        //    heavy1 = false;
+                        //}
+                        if (Input.GetMouseButton(2)) //Right Click for third heavy in the chain
                         {
                             anim.Play("Heavy3");
                             heavyAttack.SetActive(true);
-                            aCD = hCD + Time.time;
                             heavy3 = true;
+                            reset = hCD * 2 + Time.time;
+                            aCD = hCD + Time.time;
                             light1 = false;
                         }
                     }
