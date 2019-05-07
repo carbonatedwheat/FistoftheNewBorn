@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18168512, g: 0.15573892, b: 0.11530199, a: 1}
+  m_IndirectSpecularColor: {r: 0.18168515, g: 0.15573883, b: 0.115301915, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3440,6 +3440,10 @@ PrefabInstance:
       propertyPath: damage
       value: 
       objectReference: {fileID: 560814134}
+    - target: {fileID: 890387, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 265363295, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3509,6 +3513,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -179.99998
       objectReference: {fileID: 0}
+    - target: {fileID: 2029671792, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
+      propertyPath: G
+      value: 
+      objectReference: {fileID: 1135753837}
+    - target: {fileID: 2531640865685065399, guid: 6f0c95ed753676a408bdace13625e378,
+        type: 3}
+      propertyPath: damage
+      value: 
+      objectReference: {fileID: 560814134}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
 --- !u!1001 &978108356
@@ -3655,6 +3668,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1135753837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2531640865685065399, guid: 6f0c95ed753676a408bdace13625e378,
+    type: 3}
+  m_PrefabInstance: {fileID: 917456149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bc2b9de929ff84cad0292a187411e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1374085656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3714,21 +3739,9 @@ PrefabInstance:
         type: 3}
       propertyPath: G
       value: 
-      objectReference: {fileID: 1516597415}
+      objectReference: {fileID: 1135753837}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39964dff41e9d95449fa29aef4318247, type: 3}
---- !u!114 &1516597415 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 890387, guid: 6f0c95ed753676a408bdace13625e378,
-    type: 3}
-  m_PrefabInstance: {fileID: 917456149}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8880ed87ff01047a364e10c3a7e0d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1522964013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 190765631, guid: 6f0c95ed753676a408bdace13625e378,
@@ -3860,7 +3873,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a17a3f43cebf3b34b9f9ac2dcd8b6403, type: 2}
+  - {fileID: 2100000, guid: 4b55ceb0c6d4fde49aab84efee91d675, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3938,6 +3951,7 @@ MonoBehaviour:
   - {fileID: 640967907}
   Wave: 0
   wave1Done: 0
+  Wavenum: {fileID: 0}
 --- !u!4 &1898837703
 Transform:
   m_ObjectHideFlags: 0
@@ -4037,7 +4051,7 @@ PrefabInstance:
     - target: {fileID: 1624277014724326955, guid: 287b235f7f6279f47a5a5e63a1700507,
         type: 3}
       propertyPath: eMaxHealth
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1624277014147082527, guid: 287b235f7f6279f47a5a5e63a1700507,
         type: 3}
