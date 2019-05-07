@@ -241,7 +241,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1432210789}
   - component: {fileID: 1432210790}
-  - component: {fileID: 4126627415052562555}
   - component: {fileID: 2469045206923040912}
   m_Layer: 0
   m_Name: BabyB
@@ -283,21 +282,6 @@ CapsuleCollider:
   m_Height: 7.09
   m_Direction: 1
   m_Center: {x: 0.6, y: 1.18, z: -2.1}
---- !u!114 &4126627415052562555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432210786}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4ae8b3224322a040ae8ec3b6a01c1bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  xspeed: 5
-  G: {fileID: 0}
 --- !u!114 &2469045206923040912
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,11 +20,11 @@ public class AttackAnimScript : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.position) <= aRange)
         {
             Debug.Log("Swing");
-            anim.Play("enemyAttack");
+            anim.Play("Golem Swing");
         }
         else
         {
-            anim.Play("nomove");
+            anim.Play("Walk Cycle");
         }
     }
        
