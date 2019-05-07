@@ -3532,6 +3532,10 @@ PrefabInstance:
       propertyPath: hCD
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1578444402, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: dc349f69f89060d4bad6df26670a6215, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0c95ed753676a408bdace13625e378, type: 3}
 --- !u!1001 &978108356

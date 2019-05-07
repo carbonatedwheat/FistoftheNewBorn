@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Windows.Input;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class pGeneralClone : MonoBehaviour
 {
     public GameObject lightAttack, heavyAttack, blocker;//pBlock;
