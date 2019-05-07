@@ -2482,11 +2482,11 @@ GameObject:
   - component: {fileID: 1522964013}
   - component: {fileID: 1489445792}
   - component: {fileID: 1489445791}
+  - component: {fileID: 1489445786}
   - component: {fileID: 1489445790}
   - component: {fileID: 1489445789}
   - component: {fileID: 1489445788}
   - component: {fileID: 1489445787}
-  - component: {fileID: 1489445786}
   m_Layer: 0
   m_Name: P1Working
   m_TagString: Player
@@ -2558,6 +2558,51 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1489445786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489445785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2bc2b9de929ff84cad0292a187411e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightAttack: {fileID: 1716038371}
+  heavyAttack: {fileID: 1489694278}
+  blocker: {fileID: 1210699594}
+  light1: 0
+  heavy1: 0
+  light2: 0
+  heavy2: 0
+  light3: 0
+  heavy3: 0
+  blockerBool: 0
+  ok2Attack: 0
+  m1Down: 0
+  m2Down: 0
+  m1Held: 0
+  m2Held: 0
+  speed: 4
+  pMaxHealth: 100
+  pMinHealth: 0
+  pCurrentHealth: 0
+  attackTimer: 0
+  aCD: 0
+  lCD: 0.5
+  hCD: 0.8
+  reset: 0
+  damage: {fileID: 0}
+  anim: {fileID: 1489445788}
+  placeHolder: {fileID: 0}
+  punch1: {fileID: 0}
+  punch2: {fileID: 0}
+  punch3: {fileID: 0}
+  punch4: {fileID: 0}
+  punch5: {fileID: 0}
+  punch6: {fileID: 0}
 --- !u!136 &1489445790
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2635,51 +2680,6 @@ MonoBehaviour:
   pCurrentHealth: 0
   attackTimer: 0
   attackCd: 10
-  lCD: 0.5
-  hCD: 0.8
-  reset: 0
-  damage: {fileID: 0}
-  anim: {fileID: 1489445788}
-  placeHolder: {fileID: 0}
-  punch1: {fileID: 0}
-  punch2: {fileID: 0}
-  punch3: {fileID: 0}
-  punch4: {fileID: 0}
-  punch5: {fileID: 0}
-  punch6: {fileID: 0}
---- !u!114 &1489445786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1489445785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bc2b9de929ff84cad0292a187411e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lightAttack: {fileID: 1716038371}
-  heavyAttack: {fileID: 1489694278}
-  blocker: {fileID: 1210699594}
-  light1: 0
-  heavy1: 0
-  light2: 0
-  heavy2: 0
-  light3: 0
-  heavy3: 0
-  blockerBool: 0
-  ok2Attack: 0
-  m1Down: 0
-  m2Down: 0
-  m1Held: 0
-  m2Held: 0
-  speed: 4
-  pMaxHealth: 100
-  pMinHealth: 0
-  pCurrentHealth: 0
-  attackTimer: 0
-  aCD: 0
   lCD: 0.5
   hCD: 0.8
   reset: 0
