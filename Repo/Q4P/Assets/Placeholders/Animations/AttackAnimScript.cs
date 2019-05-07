@@ -21,6 +21,7 @@ public class AttackAnimScript : MonoBehaviour
         {
             Debug.Log("Swing");
             anim.Play("Golem Swing");
+            anim.Play("enemyAttack");
         }
         else
         {

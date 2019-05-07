@@ -21,7 +21,11 @@ public class pGeneralClone : MonoBehaviour
     void Start()
     {
         m1Down = false;
-        m2Down = true;
+        m2Down = false;
+        light1 = false;
+        heavy1 = false;
+        blockerBool = false;
+        ok2Attack = false;
         pCurrentHealth = pMaxHealth;
         lightAttack.SetActive(false);
         heavyAttack.SetActive(false);
@@ -31,6 +35,12 @@ public class pGeneralClone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
+    && light1 == false && heavy1 == false && blockerBool == false)
+        {
+            anim.Play("Idle");
+        }
+
         m1Down = Input.GetMouseButtonDown(0);
         m2Down = Input.GetMouseButtonDown(1);
         m1Held = Input.GetMouseButton(0);
@@ -62,18 +72,27 @@ public class pGeneralClone : MonoBehaviour
             heavy2 = heavy3 = false;
         }
 
+        if (Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == true
+                 || Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == true
+                 || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == true
+                 || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == true)
+        {
+            anim.Play("Block");
+            PlayerMovement();
+        }
         if ((Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == false
             || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == false
             || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == false)  && !Input.GetKey(KeyCode.S))
         {
-            anim.Play("Walk Cycle");
+            anim.Play("WalkCycle");
             PlayerMovement();
         }
         if (Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == false)
         {
-            anim.Play("Back Walk Cycle");
+            anim.Play("BackWalkCycle");
             PlayerMovement();
         }
+        /*
         else if (Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == true
                  || Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == true
                  || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == true
@@ -82,12 +101,13 @@ public class pGeneralClone : MonoBehaviour
             anim.Play("Block");
             PlayerMovement();
         }
+        
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
             && light1 == false && heavy1 == false && blockerBool == false)
         {
             anim.Play("Idle");
         }
-
+        */
         if (aCD >= Time.time)
         {
             ok2Attack = false;
