@@ -771,5 +771,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 949f09e9b93f65949a5a63510797defc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 15
+  delay: 1
   NewLevel: John's Test Arena
