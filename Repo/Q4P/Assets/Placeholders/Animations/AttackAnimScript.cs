@@ -11,6 +11,7 @@ public class AttackAnimScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.FindWithTag("Player").transform;
         anim = GetComponent<Animator>();
     }
 

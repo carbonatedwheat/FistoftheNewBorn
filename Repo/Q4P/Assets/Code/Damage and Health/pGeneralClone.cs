@@ -38,6 +38,7 @@ public class pGeneralClone : MonoBehaviour
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
     && light1 == false && heavy1 == false && blockerBool == false)
         {
+            //anim.SetInteger("AnimState", 0);
             anim.Play("Idle");
         }
 
@@ -77,6 +78,7 @@ public class pGeneralClone : MonoBehaviour
                  || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == true
                  || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == true)
         {
+            //anim.SetInteger("AnimState", 4);
             anim.Play("Block");
             PlayerMovement();
         }
@@ -84,11 +86,13 @@ public class pGeneralClone : MonoBehaviour
             || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == false
             || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == false)  && !Input.GetKey(KeyCode.S))
         {
+            //anim.SetInteger("AnimState", 2);
             anim.Play("WalkCycle");
             PlayerMovement();
         }
         if (Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == false)
         {
+            //anim.SetInteger("AnimState", 3);
             anim.Play("BackWalkCycle");
             PlayerMovement();
         }
@@ -130,6 +134,7 @@ public class pGeneralClone : MonoBehaviour
                 blocker.SetActive(true);
                 light1 = heavy1 = false;
                 blockerBool = true;
+                //anim.SetInteger("AnimState", 4);
                 anim.Play("Block");
                 Debug.Log("blocker enabled");
             }
@@ -154,6 +159,7 @@ public class pGeneralClone : MonoBehaviour
                 {
                     //lightAttack.SetActive(true);
                     Debug.Log("Neutral Light");
+                    //anim.SetInteger("AnimState", 11);
                     anim.Play("Light1");
                     lightAttack.SetActive(true);
                     light1 = true;
@@ -165,6 +171,7 @@ public class pGeneralClone : MonoBehaviour
                 {
                     //heavyAttack.SetActive(true);
                     Debug.Log(":::::::::::::::::::::::::::::Neutral Heavy");
+                    //anim.SetInteger("AnimState", 21);
                     anim.Play("Heavy1");
                     heavyAttack.SetActive(true);
                     heavy1 = true;
@@ -178,6 +185,7 @@ public class pGeneralClone : MonoBehaviour
                     {
                         Debug.Log("Light Combo 2");
                         lightAttack.SetActive(true);
+                        //anim.SetInteger("AnimState", 12);
                         anim.Play("Light2");
                         light2 = true;
                         reset = lCD * 2 + Time.time;
@@ -188,6 +196,7 @@ public class pGeneralClone : MonoBehaviour
                     {
                         Debug.Log("Neutral Heavy");
                         heavyAttack.SetActive(true);
+                        //anim.SetInteger("AnimState", 21);
                         anim.Play("Heavy1");
                         heavy1 = true;
                         reset = hCD * 2 + Time.time;
@@ -204,6 +213,7 @@ public class pGeneralClone : MonoBehaviour
                         {
                             Debug.Log("Light Combo 3");
                             lightAttack.SetActive(true);
+                            //anim.SetInteger("AnimState", 13);
                             anim.Play("Light3");
                             reset = lCD * 2 + Time.time;
                             aCD = lCD + Time.time;
