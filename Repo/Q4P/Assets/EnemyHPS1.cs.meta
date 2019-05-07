@@ -1,15 +1,11 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Repo/Q4P/Assets/EnemyHPS1.cs.meta
-guid: 61c207296140e2f4f9436689b5b6ae59
-=======
 guid: e941f79341b961042849fa0936d2d8c8
->>>>>>> fc0bb819457dd6ee8b56c1cd6a9e54432ca2befd:Repo/Q4P/Assets/EnemyHPS1.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
-  userData: 
+  userData:
   assetBundleName: 
-  assetBundleVariant: 
+  assetBundleVariant:
