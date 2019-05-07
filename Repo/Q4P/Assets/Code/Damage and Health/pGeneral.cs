@@ -46,13 +46,12 @@ public class pGeneral : MonoBehaviour
         {
             light2 = light3 = false;
         }
-        if (heavy1 == false)
+        if (heavy2 == false)
         {
             heavy2 = heavy3 = false;
         }
         if (reset <= Time.time)
         {
-            ok2Attack = true;
             if (Input.GetMouseButton(0) && Input.GetMouseButton(1))
             {
                 blocker.SetActive(true);
@@ -67,21 +66,24 @@ public class pGeneral : MonoBehaviour
                 blocker.SetActive(false);
                 blockerBool = false;
             }
-            if (blockerBool == false && ok2Attack == true)
+            if (blockerBool == false)
             {
-
+                ok2Attack = true;
+              
                 if (!Input.GetMouseButtonDown(0) && reset + 1.5f <= Time.time)
                 {
                     //lightAttack.SetActive(false);
                     light1 = false;
+                    heavy1 = false;
                 }
                 if (!Input.GetMouseButtonDown(1) && reset + 1.5f <= Time.time)
                 {
                     //heavyAttack.SetActive(false);
+                    light1 = false;
                     heavy1 = false;
                 }
 
-                if (Input.GetMouseButtonDown(0)) //Light Click for a light combo starter
+                if (Input.GetMouseButtonDown(0))
                 {
                     //lightAttack.SetActive(true);
                     Debug.Log("Neutral Light");
@@ -91,7 +93,7 @@ public class pGeneral : MonoBehaviour
                     ok2Attack = false;
                     light1 = true;
                 }
-                if (Input.GetMouseButtonDown(1)) //Right Click for a heavy combo starter
+                if (Input.GetMouseButtonDown(1))
                 {
                     //heavyAttack.SetActive(true);
                     Debug.Log("Neutral Heavy");
@@ -104,7 +106,7 @@ public class pGeneral : MonoBehaviour
                 if (light1 == ok2Attack == true)
                 {
                     heavy1 = false;
-                    if (Input.GetMouseButtonDown(0)) //Left Click for second light in the chain
+                    if (Input.GetMouseButtonDown(0))
                     {
                         Debug.Log("Light Combo 2");
                         lightAttack.SetActive(true);
@@ -113,7 +115,7 @@ public class pGeneral : MonoBehaviour
                         ok2Attack = false;
                         light2 = true;
                     }
-                    if (Input.GetMouseButtonDown(1)) //Right Click to start from a neutral heavy
+                    if (Input.GetMouseButtonDown(1))
                     {
                         Debug.Log("Neutral Heavy");
                         heavyAttack.SetActive(true);
@@ -122,9 +124,9 @@ public class pGeneral : MonoBehaviour
                         ok2Attack = false;
                         light1 = false;
                     }
-                    if (light2 == ok2Attack == true)
+                    if(light2 == ok2Attack == true)
                     {
-                        if (Input.GetMouseButtonDown(2)) //Left Click for third light in the chain
+                        if (Input.GetMouseButtonDown(0))
                         {
                             Debug.Log("Light Combo 3");
                             lightAttack.SetActive(true);
@@ -133,7 +135,7 @@ public class pGeneral : MonoBehaviour
                             ok2Attack = false;
                             light3 = true;
                         }
-                        if (Input.GetMouseButtonDown(1)) //Right Click to start from a neutral heavy
+                        if (Input.GetMouseButtonDown(1))
                         {
                             Debug.Log("Neutral Heavy");
                             heavyAttack.SetActive(true);
@@ -147,7 +149,7 @@ public class pGeneral : MonoBehaviour
                 if (heavy1 == ok2Attack == true)
                 {
                     light1 = false;
-                    if (Input.GetMouseButtonDown(0)) //Left Click to start from a neutral light
+                    if (Input.GetMouseButtonDown(0))
                     {
                         Debug.Log("Neutral Light");
                         lightAttack.SetActive(true);
@@ -157,7 +159,7 @@ public class pGeneral : MonoBehaviour
                         heavy1 = false;
                         light1 = true;
                     }
-                    if (Input.GetMouseButtonDown(1)) //Right Click for second heavy in the chain
+                    if (Input.GetMouseButtonDown(1))
                     {
                         Debug.Log("Heavy Combo Heavy");
                         heavyAttack.SetActive(true);
@@ -166,10 +168,10 @@ public class pGeneral : MonoBehaviour
                         ok2Attack = false;
                         heavy2 = true;
                     }
-                    if (heavy2 == ok2Attack == true)
+                    if(heavy2 == ok2Attack == true)
                     {
                         light1 = false;
-                        if (Input.GetMouseButtonDown(0)) //Left Click to start from a neutral light
+                        if (Input.GetMouseButtonDown(0))
                         {
                             anim.Play("Light1");
                             lightAttack.SetActive(true);
@@ -177,11 +179,10 @@ public class pGeneral : MonoBehaviour
                             light1 = true;
                             heavy1 = false;
                         }
-                        if (Input.GetMouseButtonDown(1)) //Right Click for third heavy in the chain
+                        if (Input.GetMouseButtonDown(1))
                         {
                             anim.Play("Heavy3");
                             heavyAttack.SetActive(true);
-                            reset = hCD + Time.time;
                             heavy3 = true;
                             light1 = false;
                         }

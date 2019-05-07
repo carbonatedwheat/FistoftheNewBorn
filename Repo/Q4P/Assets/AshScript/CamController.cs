@@ -32,7 +32,7 @@ public class CamController : MonoBehaviour
     {
         mX += Input.GetAxis("mX") * RotationSpeed;
         mY += Input.GetAxis("mY") * RotationSpeed;
-        mY = Mathf.Clamp(mY, 0, 60);
+        mY = Mathf.Clamp(mY, -35, 60);
 
         transform.LookAt(Target);
 

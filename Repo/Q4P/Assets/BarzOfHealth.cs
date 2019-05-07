@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BarzOfHealth : MonoBehaviour
 {
-    public pGeneralClone G;
+    public pGeneral G;
     public Transform bar;
 
 
@@ -22,6 +22,6 @@ public class BarzOfHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bar.localScale = new Vector3(1f, G.pCurrentHealth * .01f);
+        bar.localScale = new Vector3(1f, G.pCurrentHealth* .01f);
     }
 }

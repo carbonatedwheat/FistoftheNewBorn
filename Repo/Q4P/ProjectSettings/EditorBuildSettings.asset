@@ -5,28 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Start Screen.unity
     guid: 3f06ffa8f2f014f47bd44244cbecec61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Seth.unity
     guid: 6c4cd900bac003645abab66ebb5c24f4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Niko.unity
     guid: 314d8ca0c65d1f04486a952b6ac05e41
-  - enabled: 1
-    path: Assets/Scenes/StarryNight.unity
-    guid: b820901c5334b3f47a5b27d85183ff4c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOver.unity
     guid: c746bc27af5bae34a833ef1e57c00c41
-  - enabled: 1
-    path: Assets/Scenes/Victory Screen.unity
-    guid: 8c82441cc8912f14e8e02a031ca1200e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/John's Test Arena.unity
     guid: 633578da8f762334694993a54080b412
   - enabled: 0
+    path: Assets/Scenes/Victory Screen.unity
+    guid: 8c82441cc8912f14e8e02a031ca1200e
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
