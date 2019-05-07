@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarzOfHealth : MonoBehaviour
+public class EnemyHPS1 : MonoBehaviour
 {
-    public pGeneralClone G;
+    public eHealth E;
+
     public Transform bar;
 
 
     void Start()
     {
         bar = transform.Find("Bar");
-        
+
     }
 
     public void SetSize(float sizeNormalized)
     {
-        bar.localScale = new Vector3(1f, sizeNormalized);
+        bar.localScale = new Vector3(sizeNormalized, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        bar.localScale = new Vector3(1f, G.pCurrentHealth* .01f);
+        bar.localScale = new Vector3(E.eCurrentHealth*0.002f,1f);
     }
 }

@@ -47,14 +47,14 @@ public class Enemy : MonoBehaviour
             return;
         }
 
-        if(Vector3.Distance(transform.position, enemy.position) <= Emin)
-        {
-            SpeedDir = -1;
+        //if(Vector3.Distance(transform.position, enemy.position) <= Emin)
+        //{
+        //    SpeedDir = -1;
 
-        }else// if (Vector3.Distance(transform.position, enemy.position) > Emin)
-        {
-            SpeedDir = 1;
-        }
+        //}else// if (Vector3.Distance(transform.position, enemy.position) > Emin)
+        //{
+        //    SpeedDir = 1;
+        //}
 
 
     }
