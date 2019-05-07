@@ -117,7 +117,7 @@ public class EnemySpawn2 : MonoBehaviour
         
         Spawning();
 
-        Wavenum.text = "Wave:" + Wave;
+        //Wavenum.text = "Wave:" + Wave;
 
     }
     
