@@ -200,7 +200,7 @@ Transform:
   m_GameObject: {fileID: 159178370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -5}
-  m_LocalScale: {x: 11, y: 6, z: 1}
+  m_LocalScale: {x: 17, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -245,7 +245,7 @@ RectTransform:
   m_GameObject: {fileID: 252907646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.6125, y: 1.425, z: 1}
+  m_LocalScale: {x: 2.4592237, y: 1.763295, z: 1}
   m_Children: []
   m_Father: {fileID: 1068205781}
   m_RootOrder: 1
@@ -307,7 +307,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Nightmare Knockout
+  m_Text: Nightmare knockout
 --- !u!222 &252907650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -620,15 +620,15 @@ RectTransform:
   m_GameObject: {fileID: 1620209222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4375, y: 1.7497, z: 1}
   m_Children: []
   m_Father: {fileID: 1068205781}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 117.9}
-  m_SizeDelta: {x: 160, y: 90.1}
+  m_AnchoredPosition: {x: -69.7, y: -49.173}
+  m_SizeDelta: {x: 528.5, y: 185.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1620209224
 Animator:
@@ -682,7 +682,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: As night falls
+  m_Text: As night falls, nightmarish creatures roam the land of dreams.. Only one
+    brave warrior can hold them at bay...
 --- !u!222 &1620209226
 CanvasRenderer:
   m_ObjectHideFlags: 0
