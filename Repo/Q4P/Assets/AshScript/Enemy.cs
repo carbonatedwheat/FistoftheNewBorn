@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    public Animator anim;
     public float speed;
     public float Max;
     public float Min;
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
 
         if (Vector3.Distance(transform.position, Player.position) >= Min)
         {
-
+            anim.Play("AntWalk");
             transform.position += transform.forward * speed*SpeedDir * Time.deltaTime;
      
         }
