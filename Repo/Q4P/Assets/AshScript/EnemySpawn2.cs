@@ -55,10 +55,10 @@ public class EnemySpawn2 : MonoBehaviour
     }
     void NextWave()
     {
-        if (enemyCount == 0)
-        {
+        
+        
             Wave += 1;
-        }
+        
     }
 
 
@@ -79,7 +79,7 @@ public class EnemySpawn2 : MonoBehaviour
             {
                 isSpawning = false;
             }
-            if (enemyCount == 1)
+            if (enemyCount == 0)
             {
 
                 NextWave();
@@ -90,7 +90,7 @@ public class EnemySpawn2 : MonoBehaviour
         else if (Wave == 2)
         {
 
-            if (enemyCount == 1)
+            if (enemyCount == 0)
             {
                 isSpawning = true;
             }
@@ -98,7 +98,7 @@ public class EnemySpawn2 : MonoBehaviour
             {
                 isSpawning = false;
             }
-            if (enemyCount == 1)
+            if (enemyCount == 0)
             {
                 NextWave();
             }
@@ -107,7 +107,7 @@ public class EnemySpawn2 : MonoBehaviour
         }
         else if (Wave == 3)
         {
-            if (enemyCount == 1) 
+            if (enemyCount == 0) 
             {
                 isSpawning = true;
             }
