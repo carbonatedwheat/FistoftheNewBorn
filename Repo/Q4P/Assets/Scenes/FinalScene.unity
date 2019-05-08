@@ -1712,6 +1712,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2002183080, guid: 369c61c4e2ee7294e9cf689aceb1f075, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 369c61c4e2ee7294e9cf689aceb1f075, type: 3}
 --- !u!1 &195833384
@@ -3087,7 +3091,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 902439677}
   - {fileID: 1512975170}
-  Wave: 0
+  Wave: 1
   wave1Done: 0
   Wavenum: {fileID: 195833386}
 --- !u!4 &1607857406
@@ -3163,6 +3167,33 @@ PrefabInstance:
       propertyPath: m_TagString
       value: DPM
       objectReference: {fileID: 0}
+    - target: {fileID: 560814134, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
+      propertyPath: killZone
+      value: 40000
+      objectReference: {fileID: 0}
+    - target: {fileID: 560814134, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
+      propertyPath: Light
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 560814134, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
+      propertyPath: Heavy
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
+        type: 3}
+      propertyPath: Scoretxt
+      value: 
+      objectReference: {fileID: 105277986}
+    - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
+        type: 3}
+      propertyPath: DropShadow
+      value: 
+      objectReference: {fileID: 1832662268}
+    - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
+        type: 3}
+      propertyPath: WinCondition
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 30593387, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3206,33 +3237,6 @@ PrefabInstance:
     - target: {fileID: 30593387, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 560814134, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
-      propertyPath: killZone
-      value: 40000
-      objectReference: {fileID: 0}
-    - target: {fileID: 560814134, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
-      propertyPath: Light
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 560814134, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}
-      propertyPath: Heavy
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
-        type: 3}
-      propertyPath: Scoretxt
-      value: 
-      objectReference: {fileID: 105277986}
-    - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
-        type: 3}
-      propertyPath: DropShadow
-      value: 
-      objectReference: {fileID: 1832662268}
-    - target: {fileID: 2440225636684922431, guid: 480b4f758119bef4c9a2c215f21c38ea,
-        type: 3}
-      propertyPath: WinCondition
-      value: 2000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 480b4f758119bef4c9a2c215f21c38ea, type: 3}

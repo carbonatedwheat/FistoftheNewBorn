@@ -33,7 +33,7 @@ public class pGeneralClone : MonoBehaviour
         reset = Time.time;
     }
     // Update is called once per frame
-    void Update()
+    void Update()    
     {
         if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
     && light1 == false && heavy1 == false && blockerBool == false)

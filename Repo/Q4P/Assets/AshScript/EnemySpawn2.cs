@@ -55,10 +55,11 @@ public class EnemySpawn2 : MonoBehaviour
     }
     void NextWave()
     {
-        
-        
+        if (enemyCount == 0)
+        {
+
             Wave += 1;
-        
+        }
     }
 
 
