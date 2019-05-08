@@ -11,7 +11,6 @@ public class AttackAnimScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.FindWithTag("Player").transform;
         anim = GetComponent<Animator>();
     }
 
@@ -21,7 +20,10 @@ public class AttackAnimScript : MonoBehaviour
         if (Vector3.Distance(transform.position, Player.position) <= aRange)
         {
             Debug.Log("Swing");
+
             anim.Play("Golem Swing");
+
+
             anim.Play("enemyAttack");
         }
         else
