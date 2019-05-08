@@ -36,9 +36,11 @@ public class CamController : MonoBehaviour
 
         transform.LookAt(Target);
 
-        Target.rotation = Quaternion.Euler(mY, mX, 0);
-        Player.rotation = Quaternion.Euler(0, mX, 0);
+        //Target.rotation = Quaternion.Euler(mY, mX, 0);
+        //Player.rotation = Quaternion.Euler(0, mX, 0);
+        Target.eulerAngles = new Vector3(mY, mX, 0);
 
+        Player.eulerAngles = new Vector3(0, mX, 0);
 
     }
 }

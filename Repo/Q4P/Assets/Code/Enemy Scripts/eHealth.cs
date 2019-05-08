@@ -10,7 +10,10 @@ public class eHealth : MonoBehaviour {
     public WinCond wC;
     public DamageScript damage;
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
+        wC = GameObject.FindWithTag("DPM").GetComponent<WinCond>();
+        damage = GameObject.FindWithTag("DPM").GetComponent<DamageScript>();
         eCurrentHealth = eMaxHealth;
 	}
 
