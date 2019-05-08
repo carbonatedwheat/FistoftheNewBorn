@@ -164,8 +164,8 @@ public class pGeneralClone : MonoBehaviour
                     if (Input.GetMouseButton(0)) //Left Click for second light in the chain
                     {
                         Debug.Log("Light Combo 2");
+                        anim.SetInteger("AnimState", 12); 
                         lightAttack.SetActive(true);
-                        anim.SetInteger("AnimState", 12);
                         //anim.Play("Light2");
                         light2 = true;
                         reset = lCD * 2 + Time.time;
@@ -200,16 +200,6 @@ public class pGeneralClone : MonoBehaviour
                             light3 = true;
                             ok2Attack = false;
                         }
-                        //if (Input.GetMouseButton(1)) //Right Click to start from a neutral heavy
-                        //{
-                        //    Debug.Log("Neutral Heavy");
-                        //    heavyAttack.SetActive(true);
-                        //    anim.Play("Heavy1");
-                        //    reset = hCD * 2 + Time.time;
-                        //    aCD = hCD + Time.time;
-                        //    ok2Attack = false;
-                        //    light1 = false;
-                        //}
                     }
                 }
                 //Debug.Log((heavy1 == true && ok2Attack == true) + "  ?????????????  " 
