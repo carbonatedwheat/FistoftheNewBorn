@@ -3091,7 +3091,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 902439677}
   - {fileID: 1512975170}
-  Wave: 0
+  Wave: 1
   wave1Done: 0
   Wavenum: {fileID: 195833386}
 --- !u!4 &1607857406
