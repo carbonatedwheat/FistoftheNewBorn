@@ -96,32 +96,12 @@ public class pGeneralClone : MonoBehaviour
             //anim.Play("BackWalkCycle");
             PlayerMovement();
         }
-        /*
-        else if (Input.GetKey(KeyCode.W) && ok2Attack == true && blockerBool == true
-                 || Input.GetKey(KeyCode.S) && ok2Attack == true && blockerBool == true
-                 || Input.GetKey(KeyCode.A) && ok2Attack == true && blockerBool == true
-                 || Input.GetKey(KeyCode.D) && ok2Attack == true && blockerBool == true)
-        {
-            anim.Play("Block");
-            PlayerMovement();
-        }
-        
-        if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D)
-            && light1 == false && heavy1 == false && blockerBool == false)
-        {
-            anim.Play("Idle");
-        }
-        */
         if (aCD >= Time.time)
         {
             ok2Attack = false;
             lightAttack.SetActive(false);
             heavyAttack.SetActive(false);
         }
-        //if (ok2Attack == false)
-        //{
-        //    reset = lCD + aCD * 2;
-        //}
         if (reset <= Time.time && aCD <= Time.time)
         {
             light1 = heavy1 = false;
