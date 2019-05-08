@@ -13,7 +13,7 @@ public class start : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("FinalScene");
+        SceneManager.LoadScene("StarryNight");
     }
     // Update is called once per frame
     void Update()
