@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
 
         Player = GameObject.FindWithTag("Player").transform;
         enemy = GameObject.FindWithTag("Enemy").transform;
-
     }
 
     void Update()
